@@ -1,0 +1,16 @@
+.search-section_intro__title{
+font-family: 'RobotoSlabRegular';
+font-size: 60px;
+margin: 0;
+padding-top: 10%;
+}
+.search-section_intro__subtitle{
+    font-family: 'RobotoRegular';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: normal;
+    margin: 0;
+    padding-top: 32px;
+    width: 545px;
+    padding-bottom: 64px;
+    }

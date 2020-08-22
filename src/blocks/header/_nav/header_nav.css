@@ -1,0 +1,39 @@
+.header_nav {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'RobotoMedium', sans-serif;
+    font-size: 18px;
+    overflow: visible;
+    
+}
+.header_nav__authorization {
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    height: 48px;
+    width: 176px;
+    margin-left: 32px;
+}
+.header_nav__authorization:focus {
+    outline: none;
+}
+.header_nav__exit {
+    cursor: pointer;
+    color: black;
+    border-radius: 100px;
+    background-color: #FFF;
+    border: 1px solid #000;
+    height: 48px;
+    width: 112px;
+    display: none;
+}
+.header_nav__main {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 27px;
+}
+.header_nav__saved {
+    border-bottom: 5px solid #fff;
+    padding-bottom: 25px;
+    display: none;
+}

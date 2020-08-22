@@ -1,0 +1,6 @@
+.result-section_articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 104px;
+    padding-right: 104px;
+}

@@ -1,0 +1,16 @@
+.result-section_zero-result {
+    height: 294px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding-top: 80px;
+}
+.result-section_zero-result__title {
+font-family: 'RobotoSlabRegular';
+font-size: 26px;
+font-weight: normal;
+line-height: 30px;
+padding-top: 30px;
+margin: 0px;
+}

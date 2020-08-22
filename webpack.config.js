@@ -28,7 +28,10 @@ module.exports = {
       test: /\.(png|jpe?g|svg|gif|ico)$/,
       use: [
         { loader: 'file-loader?name=./images/[name].[ext]' },
-        { loader: 'image-webpack-loader' },
+        {
+          loader: 'image-webpack-loader',
+          options: {},
+        },
       ],
       exclude: /node_modules/,
     },
@@ -40,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './style/style.[contenthash].css',
+      filename: 'style.[contenthash].css',
     }),
     new OptimizeCssAssetsPlugin({
       assetNameRegExp: /\.css$/,

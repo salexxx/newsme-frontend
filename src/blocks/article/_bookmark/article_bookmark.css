@@ -1,0 +1,22 @@
+.article_bookmark{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    top: 24px;
+    right: 24px;
+    /* background-image: url('../../../images/Rectangle-normal.png'); */
+    background-repeat: no-repeat;
+    background-position: center; 
+} 
+
+.article_bookmark__normal {
+    background-image: url('../../../images/Rectangle-normal.png');
+}
+.article_bookmark__normal:hover {
+    background-image: url('../../../images/Rectangle-hover.svg');
+}
+.article_bookmark__marked {
+    background-image: url('../../../images/Rectangle-marked.png');
+}

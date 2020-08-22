@@ -1,0 +1,12 @@
+
+.header_logo {
+    font-family: 'RobotoSlabBold', sans-serif; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+   /*  padding-left: 104px; */
+}
+.header_logo__not-logget-in {
+    color: #fff;
+}
