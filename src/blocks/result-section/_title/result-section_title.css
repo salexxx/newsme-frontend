@@ -3,8 +3,39 @@
     font-size: 40px;
     color: #1a1b22;
     padding-top: 80px;
-    padding-bottom: 80px;
     padding-left: 104px;
     font-weight: normal;
     margin: 0;
+}
+.result-section_title-saved {
+max-width: 530px;
+padding-top: 28px;
+}
+.result-section_uptitle {
+    font-size: 18px;
+    color: rgba(26, 27, 34, .5);
+    font-weight: normal;
+}
+.result-section_subtitle {
+    font-family: 'RobotoRegular';
+    padding-top: 28px;
+    padding-bottom: 56px;
+    font-size: 18px;
+    color: #1a1b22;
+    font-weight: normal;
+}
+.result-section_subtitle-bold {
+ 
+    font-weight: bold;
+}
+@media all and (max-width: 760px) {
+    .result-section_title {
+     font-size: 30px;
+    }
+    .result-section_uptitle {
+        font-size: 12px;
+    }
+    .result-section_subtitle {
+        font-size: 12px;
+    }
 }

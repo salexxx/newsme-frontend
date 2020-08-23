@@ -6,7 +6,7 @@
     font-family: 'RobotoRegular';
     font-size: 18px;
     border: none;
-    /* margin: 64px auto; */
+    margin-bottom: 64px; 
     border-radius: 80px;
 }
 .result-section_button:hover{

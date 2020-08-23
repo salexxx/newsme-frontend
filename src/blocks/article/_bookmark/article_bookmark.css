@@ -20,3 +20,6 @@
 .article_bookmark__marked {
     background-image: url('../../../images/Rectangle-marked.png');
 }
+.article_bookmark__trash {
+    background-image: url('../../../images/trash.png');
+}

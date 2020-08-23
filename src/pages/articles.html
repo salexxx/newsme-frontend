@@ -4,72 +4,112 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="Дипломная работа Yandex Praktikum">
+  <meta name="description" content="Дипломная работа Yandex Praktikum. Сервис поиска и сохранения новостных статей.">
   <meta name="author" content="Smolyaninov A.">
-  <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+  <link rel="icon" href="<%=require('../images/favicon.png').default%>" sizes="16x16" type="image/png" >
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
   <title>News Explorer</title>
 </head>
 <body>
-    <a href="./">to main</a>
-  <div class="root">
-    <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
-    </header>
-    <div class="profile root__section">
-      <div class="user-info">
-        <div class="user-info__photo"></div>
-        <div class="user-info__data">
-          <h1 class="user-info__name"></h1>
-          <p class="user-info__job"></p>
-          <button class="button user-info__edit-button">Edit</button>
+  <header class="header">
+      <p class="header_logo header_logo__black">NewsExplorer</p>
+      <nav class="header_nav">
+        <a href="./index.html" class="header_nav header_nav__black">Главная</a>
+        <a href="./articles.html" class="header_nav header_nav__black header_nav__active-black">Сохранённые статьи</a>
+        <button class="header_nav header_nav__button header_nav__disable">Авторизоваться</button>
+        <button class="header_nav header_nav__button header_nav__button-black header_nav__black">Грета
+          <image  src="<%=require('../images/exit.png').default%>">
+        </button>
+      </nav>
+  </header>
+
+  <h5 class="result-section_title result-section_uptitle">Сохраненные статьи</h5>
+  <h2 class="result-section_title result-section_title-saved">Грета, у вас 5 сохраненных статей</h2>
+  <p class="result-section_title result-section_subtitle">По ключевым словам: <span class="result-section_subtitle-bold">Природа, Тайга</span> и <span class="result-section_subtitle-bold">2 другим</span></p>
+  <section class="result-section"> 
+      
+      <div class="result-section_articles">
+  
+      <figure class="article">
+          <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article_image">
+          <div class="article_content">
+              <p class="article_date">2 августа, 2019</p>
+              <h4 class="article_title">Национальное достояние – парки</h4>
+              <p class="article_text">В 2016 году Америка отмечала важный юбилей:
+              сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
+              где и сегодня каждый может приобщиться к природе.</p>
+              <p class="article_source">ДЗЕН</p>
+          </div>
+          <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
+          <button class="article_bookmark article_bookmark__trash"></button>
+      </figure>
+  
+      <figure class="article">
+          <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article_image">
+          <div class="article_content">
+              <p class="article_date">2 августа, 2019</p>
+              <h4 class="article_title">Лесные огоньки: история одной фотографии</h4>
+              <p class="article_text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+                  из местных чудес природы.</p>
+              <p class="article_source">Афиша</p>
+          </div>
+          <button class="article_tooltip ">Убрать из сохраненных</button>
+          <button class="article_bookmark article_bookmark__trash"></button>
+      </figure>
+  
+      <figure class="article">
+         <img src="<%=require('../images/image_05.png').default%>" alt="article image" class="article_image">
+         <div class="article_content">
+            <p class="article_date">2 августа, 2019</p>
+            <h4 class="article_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+            <p class="article_text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <p class="article_source">Медиазона</p>
         </div>
-        <button class="button user-info__button">+</button>
+        <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
+        <button class="article_bookmark article_bookmark__trash"></button>
+      </figure>
+   
+
+    <figure class="article">
+      <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article_image">
+      <div class="article_content">
+          <p class="article_date">2 августа, 2019</p>
+          <h4 class="article_title">Национальное достояние – парки</h4>
+          <p class="article_text">В 2016 году Америка отмечала важный юбилей:
+          сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
+          где и сегодня каждый может приобщиться к природе.</p>
+          <p class="article_source">ДЗЕН</p>
       </div>
+      <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
+      <button class="article_bookmark article_bookmark__trash"></button>
+  </figure>
+
+  <figure class="article">
+    <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article_image">
+    <div class="article_content">
+        <p class="article_date">2 августа, 2019</p>
+        <h4 class="article_title">Лесные огоньки: история одной фотографии</h4>
+        <p class="article_text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+            из местных чудес природы.</p>
+        <p class="article_source">Афиша</p>
     </div>
-    <div class="places-list root__section">
-    </div>
-    <div class="popup">
-      <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
-        <h3 class="popup__title">Новое место</h3>
-        <form id="formElem" class="popup__form" name="new" >
-            <div class="popup__form">
-            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" novalidate minlength="2" maxlength="30">
-            <span class="popup__error-message"></span>
-            </div>
-            <div class="popup__form">
-            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" novalidate>
-            <span class="popup__error-message"></span>
-            </div>
-            <button type="submit" class="button popup__button">+</button>
-        </form>
-      </div>
-    </div>
-    <div class="userpopup">
-      <div class="userpopup__content">
-        <img src="./images/close.svg" alt="" class="userpopup__close">
-        <h3 class="userpopup__title">Редактировать профиль</h3>
-        <form id="userElem" class="userpopup__form" name="newuser">
-            <div class="userpopup__form">
-            <input type="text" name="name" class="userpopup__input userpopup__input_type_name" placeholder="Имя" novalidate minlength="2" maxlength="30">
-            <span class="userpopup__error-message"></span>
-            </div>
-            <div class="userpopup__form">
-            <input type="text" name="occupation" class="userpopup__input userpopup__input_type_link-url" placeholder="О себе" novalidate minlength="2" maxlength="30">
-            <span class="userpopup__error-message"></span>
-            </div>
-            <button type="submit" class="button userpopup__button">Сохранить</button>
-        </form>
-      </div>
-    </div> 
-    <div class="imgpopup">
-      <div class="imgpopup__content">
-        <img src="./images/close.svg" alt="" class="imgpopup__close">
-        <img  alt='' class="imgpopup__source">
-      </div>
-    </div>
+    <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
+    <button class="article_bookmark article_bookmark__trash"></button>
   </div>
-  <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script>
+</figure>
+    </section>
+    <div class="footer_menu">
+      <p class="footer_menu-copyrigth">© 2020 Supersite, Powered by News API</p>
+      <nav class="footer_menu-nav">
+              <a href="index.html" class="footer_menu-link">Главная</a>
+              <a href="https://praktikum.yandex.ru/" class="footer_menu-link" target="_blank">Яндекс.Практикум</a>
+              <a href="https://github.com/salexxx/" target="_blank">
+                 <img src="<%=require('../images/github-logo.png').default%>" alt="github icon">
+              </a>
+              <a href="https://vk.com/id19404832" target="_blank" class="menu__link">
+                  <img src="<%=require('../images/vk.png').default%>" alt="vk icon">
+              </a>
+      </nav>
+    </div>
  </body>
 </html>

@@ -7,9 +7,12 @@
 @import url('./_tooltip/article_tooltip.css');
 @import url('./_bookmark/article_bookmark.css');
 .article {
+    display: flex;
+    flex-direction: column;
     border-radius: 10px;
     background-color: #fff;
     max-width: 400px;
     position: relative;
-    margin: 16px 8px;
+    margin: 0;
+    justify-self: center;
 }

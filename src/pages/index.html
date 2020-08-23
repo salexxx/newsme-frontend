@@ -12,13 +12,13 @@
 </head>
 <body>
   <header class="header">
-      <p class="header_logo header_logo__not-logget-in">NewsExplorer</p>
+      <p class="header_logo header_logo__white">NewsExplorer</p>
       <nav class="header_nav">
-        <a href="./index.html" class="header_nav header_nav__main">Главная</a>
-        <a href="./articles.html" class="header_nav header_nav__saved">Сохранённые статьи</a>
-        <button class="header_nav header_nav__authorization">Авторизоваться</button>
-        <button class="header_nav header_nav__exit">Грета
-          <image  src="<%=require('../images/exit.png').default%>">
+        <a href="./index.html" class="header_nav header_nav__active">Главная</a>
+        <a href="./articles.html" class="header_nav ">Сохранённые статьи</a>
+        <button class="header_nav header_nav__button">Авторизоваться</button>
+        <button class="header_nav header_nav__button header_nav__disable">Грета
+          <image  src="<%=require('../images/exit-white.png').default%>">
         </button>
       </nav>
       <div class="header_background"></div>
@@ -87,12 +87,38 @@
           <p class="article_text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
           <p class="article_source">Риа</p>
       </div>
-      <button class="article_tooltip">Войдите, чтобы сохранять статьи</button>
+      <button class="article_tooltip ">Войдите, чтобы сохранять статьи</button>
       <button class="article_bookmark article_bookmark__normal"></button>
     </figure>
   </div>
   <button class="result-section_button">Показать ещё</button>
   </section>
+
+  <footer class="footer">
+    <figure class="footer_about">
+      <img class="footer_image" src="<%=require('../images/author.png').default%>" alt="authors photo">
+      <figcaption class="footer_figcaption">
+        <h3 class="footer_figcaption__title">Об авторе</h3>
+        <p class="footer_figcaption__text">Привет всем! Меня зовут Алексей Смолянинов. Я занимаюсь веб-разработкой. Интересуюсь информацией в области сетевой безопасности.
+          <br>
+          <br>
+        На курсах Яндекс.Практикум я познакомился с фронтенд и бэкенд разработкой. Научился работать на JavaScript, HTML/CSS. Освоил Node.js, Webpack, Git, MongoDB. Теперь, использовав время самоизоляции на самообразование, я с удовольствием приступлю к работе над сайтом о котором давно мечтал - сайт Федерации любителей и ветеранов горнолыжного спорта.  </p>
+      </figcaption>
+    </figure>
+    <div class="footer_menu">
+      <p class="footer_menu-copyrigth">© 2020 Supersite, Powered by News API</p>
+      <nav class="footer_menu-nav">
+              <a href="index.html" class="footer_menu-link">Главная</a>
+              <a href="https://praktikum.yandex.ru/" class="footer_menu-link" target="_blank">Яндекс.Практикум</a>
+              <a href="https://github.com/salexxx/" target="_blank">
+                 <img src="<%=require('../images/github-logo.png').default%>" alt="github icon">
+              </a>
+              <a href="https://vk.com/id19404832" target="_blank" class="menu__link">
+                  <img src="<%=require('../images/vk.png').default%>" alt="vk icon">
+              </a>
+      </nav>
+    </div>
+  </footer>
     <!-- <div class="profile root__section">
       <div class="user-info">
         <div class="user-info__photo"></div>

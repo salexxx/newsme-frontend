@@ -13,9 +13,12 @@
     border-bottom: 1px solid #A5A5A5;
     padding:0px 104px 0px 104px;
     margin: auto;
-    
- 
-    
   
 }
+@media all and (max-width: 898px) {
+    .header {
+        padding: 0px 40px 0px 40px;;
+    }
+}
+
 
