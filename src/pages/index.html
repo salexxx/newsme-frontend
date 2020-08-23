@@ -18,7 +18,7 @@
         <a href="./articles.html" class="header_nav ">Сохранённые статьи</a>
         <button class="header_nav header_nav__button">Авторизоваться</button>
         <button class="header_nav header_nav__button header_nav__disable">Грета
-          <image  src="<%=require('../images/exit-white.png').default%>">
+          <image  src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button>
       </nav>
       <div class="header_background"></div>
@@ -43,7 +43,7 @@
   </div>
 
   <div class="result-section_zero-result">
-    <img  src="<%=require('../images/not-found_v1.png').default%>">
+    <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
     <span class="result-section_zero-result__title">Ничего не найдено</span>
     <span class="result-section_span">К сожалению по вашему запросу ничего не найдено.</span>
   </div>
@@ -127,17 +127,17 @@
         <form class="popup__form" >
             <div class="popup__form">
             <span class="popup__invitation">Email</span>
-            <input type="text" id="Email" class="popup__input popup__input_type_email" placeholder="Введите почту" novalidate>
+            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
             <span class="popup__error-message">Не правильный формат email</span>
             </div>
             <div class="popup__form">
             <span class="popup__invitation">Пароль</span>
-            <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
+            <input type="password" class="popup__input" placeholder="Введите пароль">
             <span class="popup__error-message"></span>
             </div>
             <div class="popup__content-center">
             <button type="submit" class="button popup__button">Войти</button>
-             <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Зарегистрироваться</a></span>
+             <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Зарегистрироваться</a>
             </div>
         </form>
       </div>
@@ -145,28 +145,28 @@
     
     <div class="popup" id="authen"  style="display: none;"> <!-- style="display: none;" -->
       <div class="popup__content">
-        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Регистрация</h3>
-        <form id="Enterform" class="popup__form" >
+        <form  class="popup__form" >
             <div class="popup__form">
             <span class="popup__invitation">Email</span>
-            <input type="text" id="Email" class="popup__input popup__input_type_email" placeholder="Введите почту" novalidate>
+            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
             <span class="popup__error-message">Не правильный формат email</span>
             </div>
             <div class="popup__form">
             <span class="popup__invitation">Пароль</span>
-            <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
+            <input type="password" class="popup__input" placeholder="Введите пароль" >
             <span class="popup__error-message"></span>
             </div>
             <div class="popup__form">
               <span class="popup__invitation">Имя</span>
-              <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
+              <input type="text"  class="popup__input" placeholder="Введите пароль" >
               <span class="popup__error-message"></span>
               </div>
               <div class="popup__content-center">
               <span class="popup__error-message">Такой пользователь уже есть</span>
             <button type="submit" class="button popup__button">Зарегистрироваться</button>
-            <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Войти</a></span>
+            <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Войти</a>
               </div>
         </form>
       </div>
@@ -174,13 +174,12 @@
 
     <div class="popup" id="authen-success" style="display: none;"> <!-- style="display: none;" -->
       <div class="popup__content">
-        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
         <a class="popup__invitation popup__invitation-bold" href="">Выполнить вход</a>
       </div>
     </div>
-
-  </div>
+  
   <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> -->
  </body>
 </html>

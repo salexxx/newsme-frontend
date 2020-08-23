@@ -18,7 +18,7 @@
         <a href="./articles.html" class="header_nav header_nav__black header_nav__active-black">Сохранённые статьи</a>
         <button class="header_nav header_nav__button header_nav__disable">Авторизоваться</button>
         <button class="header_nav header_nav__button header_nav__button-black header_nav__black">Грета
-          <image  src="<%=require('../images/exit.png').default%>">
+          <image  src="<%=require('../images/exit.png').default%>" alt="exit">
         </button>
       </nav>
   </header>
@@ -26,8 +26,8 @@
   <h5 class="result-section_title result-section_uptitle">Сохраненные статьи</h5>
   <h2 class="result-section_title result-section_title-saved">Грета, у вас 5 сохраненных статей</h2>
   <p class="result-section_title result-section_subtitle">По ключевым словам: <span class="result-section_subtitle-bold">Природа, Тайга</span> и <span class="result-section_subtitle-bold">2 другим</span></p>
+ 
   <section class="result-section"> 
-      
       <div class="result-section_articles">
   
       <figure class="article">
@@ -95,9 +95,10 @@
     </div>
     <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
     <button class="article_bookmark article_bookmark__trash"></button>
-  </div>
-</figure>
-    </section>
+  </figure>
+      </div>
+</section>
+
     <div class="footer_menu">
       <p class="footer_menu-copyrigth">© 2020 Supersite, Powered by News API</p>
       <nav class="footer_menu-nav">
