@@ -102,7 +102,7 @@
         <p class="footer_figcaption__text">Привет всем! Меня зовут Алексей Смолянинов. Я занимаюсь веб-разработкой. Интересуюсь информацией в области сетевой безопасности.
           <br>
           <br>
-        На курсах Яндекс.Практикум я познакомился с фронтенд и бэкенд разработкой. Научился работать на JavaScript, HTML/CSS. Освоил Node.js, Webpack, Git, MongoDB. Теперь, использовав время самоизоляции на самообразование, я с удовольствием приступлю к работе над сайтом о котором давно мечтал - сайт Федерации любителей и ветеранов горнолыжного спорта.  </p>
+        На курсах Яндекс.Практикум я познакомился с фронтенд и бэкенд программированием. Научился работать на JavaScript, HTML/CSS. Освоил Node.js, Webpack, Git, MongoDB. Теперь, использовав время самоизоляции на самообразование, я с удовольствием приступлю к работе над сайтом о котором давно мечтал - сайт Федерации любителей и ветеранов горнолыжного спорта.  </p>
       </figcaption>
     </figure>
     <div class="footer_menu">
@@ -119,59 +119,67 @@
       </nav>
     </div>
   </footer>
-    <!-- <div class="profile root__section">
-      <div class="user-info">
-        <div class="user-info__photo"></div>
-        <div class="user-info__data">
-          <h1 class="user-info__name"></h1>
-          <p class="user-info__job"></p>
-          <button class="button user-info__edit-button">Edit</button>
-        </div>
-        <button class="button user-info__button">+</button>
-      </div>
-    </div>
-    <div class="places-list root__section">
-    </div>
-    <div class="popup">
+ 
+    <div class="popup" id="autoriz" style="display: none;" > <!-- style="display: none;" -->
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
-        <h3 class="popup__title">Новое место</h3>
-        <form id="formElem" class="popup__form" name="new" >
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <h3 class="popup__title">Вход</h3>
+        <form class="popup__form" >
             <div class="popup__form">
-            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" novalidate minlength="2" maxlength="30">
-            <span class="popup__error-message"></span>
+            <span class="popup__invitation">Email</span>
+            <input type="text" id="Email" class="popup__input popup__input_type_email" placeholder="Введите почту" novalidate>
+            <span class="popup__error-message">Не правильный формат email</span>
             </div>
             <div class="popup__form">
-            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку" novalidate>
+            <span class="popup__invitation">Пароль</span>
+            <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
             <span class="popup__error-message"></span>
             </div>
-            <button type="submit" class="button popup__button">+</button>
+            <div class="popup__content-center">
+            <button type="submit" class="button popup__button">Войти</button>
+             <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Зарегистрироваться</a></span>
+            </div>
         </form>
       </div>
     </div>
-    <div class="userpopup">
-      <div class="userpopup__content">
-        <img src="./images/close.svg" alt="" class="userpopup__close">
-        <h3 class="userpopup__title">Редактировать профиль</h3>
-        <form id="userElem" class="userpopup__form" name="newuser">
-            <div class="userpopup__form">
-            <input type="text" name="name" class="userpopup__input userpopup__input_type_name" placeholder="Имя" novalidate minlength="2" maxlength="30">
-            <span class="userpopup__error-message"></span>
+    
+    <div class="popup" id="authen"  style="display: none;"> <!-- style="display: none;" -->
+      <div class="popup__content">
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <h3 class="popup__title">Регистрация</h3>
+        <form id="Enterform" class="popup__form" >
+            <div class="popup__form">
+            <span class="popup__invitation">Email</span>
+            <input type="text" id="Email" class="popup__input popup__input_type_email" placeholder="Введите почту" novalidate>
+            <span class="popup__error-message">Не правильный формат email</span>
             </div>
-            <div class="userpopup__form">
-            <input type="text" name="occupation" class="userpopup__input userpopup__input_type_link-url" placeholder="О себе" novalidate minlength="2" maxlength="30">
-            <span class="userpopup__error-message"></span>
+            <div class="popup__form">
+            <span class="popup__invitation">Пароль</span>
+            <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
+            <span class="popup__error-message"></span>
             </div>
-            <button type="submit" class="button userpopup__button">Сохранить</button>
+            <div class="popup__form">
+              <span class="popup__invitation">Имя</span>
+              <input type="current-password" id="userPassword" class="popup__input" placeholder="Введите пароль" novalidate>
+              <span class="popup__error-message"></span>
+              </div>
+              <div class="popup__content-center">
+              <span class="popup__error-message">Такой пользователь уже есть</span>
+            <button type="submit" class="button popup__button">Зарегистрироваться</button>
+            <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Войти</a></span>
+              </div>
         </form>
       </div>
-    </div> 
-    <div class="imgpopup">
-      <div class="imgpopup__content">
-        <img src="./images/close.svg" alt="" class="imgpopup__close">
-        <img  alt='' class="imgpopup__source">
+    </div>
+
+    <div class="popup" id="authen-success" style="display: none;"> <!-- style="display: none;" -->
+      <div class="popup__content">
+        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+        <a class="popup__invitation popup__invitation-bold" href="">Выполнить вход</a>
       </div>
     </div>
+
   </div>
   <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> -->
  </body>

@@ -5,14 +5,6 @@
     padding: 6% 104px;
 }
 
-/* 
-@media all and (max-width: 1000px) {
-    .result-section_articles{
-         grid-gap: 8px;
-        margin-top: 32px; 
-        grid-template-columns: repeat(3, 33%);
-    }
-} */
 @media all and (max-width: 768px) {
     .result-section_articles{
         grid-template-columns: repeat(2, 1fr);
