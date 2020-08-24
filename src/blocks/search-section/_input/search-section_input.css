@@ -9,8 +9,8 @@ width: 100%;
 .search-section_input:focus {
     outline: none;
 }
-@media all and (max-width: 768px) {
+/* @media all and (max-width: 768px) {
     .search-section_input {
         max-width: 448px;
     }
-}
+} */
