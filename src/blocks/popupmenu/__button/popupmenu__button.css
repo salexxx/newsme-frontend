@@ -1,0 +1,11 @@
+.popupmenu__button {
+    
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    height: 100px;
+    padding: 0px 15px;
+    color: #fff;
+    width: 288px;
+    align-self: center;
+}

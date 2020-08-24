@@ -9,3 +9,8 @@
     margin-bottom: 87px;
 
 }
+@media all and (max-width: 768px) {
+    .search-section {
+        max-width: 448px;
+    }
+}

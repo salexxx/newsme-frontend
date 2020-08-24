@@ -1,0 +1,14 @@
+.popupmenu__icon {
+    
+    width: 26px;
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    cursor: pointer;
+   
+}
+@media all and (min-width: 663px) {
+    .popupmenu__icon {
+       display: none;
+    }
+}

@@ -15,7 +15,7 @@
     margin: auto;
   
 }
-@media all and (max-width: 898px) {
+@media all and (max-width: 1024px) {
     .header {
         padding: 0px 40px 0px 40px;;
     }

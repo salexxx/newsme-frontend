@@ -12,8 +12,10 @@
 </head>
 <body>
   <header class="header">
+    <img class="popupmenu__icon" src="<%=require('../images/menu.png').default%>" alt="menu">
       <p class="header_logo header_logo__white">NewsExplorer</p>
       <nav class="header_nav">
+        
         <a href="./index.html" class="header_nav header_nav__active">Главная</a>
         <a href="./articles.html" class="header_nav ">Сохранённые статьи</a>
         <button class="header_nav header_nav__button">Авторизоваться</button>
@@ -119,6 +121,19 @@
       </nav>
     </div>
   </footer>
+
+  <div class="popupmenu" style="display: none;"> <!-- style="display: none;" -->
+    <nav class="popupmenu__content">
+      
+      <img src="<%=require('../images/back.png').default%>" alt="" class="popupmenu__close">
+      <p class="header header_logo header_logo__white">NewsExplorer</p>
+      <nav class="popupmenu__nav">
+        <a href="./index.html" class="popupmenu__nav">Главная</a>
+        <a href="./articles.html" class="popupmenu__nav">Сохранённые статьи</a>
+        <button class="popupmenu_nav popupmenu__button">Авторизоваться</button>
+      </nav>
+    </nav>
+  </div>
  
     <div class="popup" id="autoriz" style="display: none;" > <!-- style="display: none;" -->
       <div class="popup__content">
