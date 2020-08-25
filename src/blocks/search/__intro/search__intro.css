@@ -1,37 +1,36 @@
-.search-section_intro {
+.search__intro {
     display: flex;
     flex-direction: column;
 }
 
-.search-section_intro__title{
+.search__intro_title{
 font-family: 'RobotoSlabRegular';
 font-size: 60px;
 margin: 0;
 padding-top: 10%;
 }
-.search-section_intro__subtitle{
+.search__intro_subtitle{
     font-family: 'RobotoRegular';
     font-size: 18px;
     line-height: 24px;
     font-weight: normal;
     margin: 0;
-    padding-top: 32px;
+    padding-top: 6%;
+    padding-bottom: 9%;
     max-width: 545px;
-    padding-bottom: 64px;
     }
 
 @media all and (max-width: 768px) {
-    .search-section_intro__title {
+    .search__intro_title {
         font-size: 36px;
         max-width: 385px; 
     }
-    .search-section_intro__subtitle {
+    .search__intro_subtitle {
         max-width: 448px;
     }
-    
 }
-@media all and (max-width: 768px) {
-    .search-section_input {
-        max-width: 285px;
+@media all and (max-width: 320px) {
+    .search__intro_subtitle {
+        padding-bottom: 35%; 
     }
 }

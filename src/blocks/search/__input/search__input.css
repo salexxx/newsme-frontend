@@ -1,0 +1,20 @@
+ .search__input {
+    background-color: #fff;
+    height: 90%;
+    width: 100%; 
+    border-style: none;
+    border-radius: 100px;
+    font-family: 'RobotoRegular';
+    font-size: 16px;
+    padding-left: 24px;
+} 
+.search__input:focus {
+    outline: none;
+}
+
+@media all and (max-width: 320px) {
+    .search__input {
+       height: 56px;
+       width: 90%;
+    }
+}

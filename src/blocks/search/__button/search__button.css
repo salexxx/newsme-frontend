@@ -1,0 +1,39 @@
+.search__button {
+   background-color: #2F71E5;
+   border-radius: 100px;
+   height: 100%;
+   max-width: 168px; 
+   font-family: 'RobotoMedium';
+   font-size: 18px;
+   border-style: none;
+   color: #fff;
+   cursor: pointer;
+   width: 100%;
+
+} 
+.search__button:focus {
+    outline: none;
+    background-color: #347eff;
+   
+ } 
+ .search__button:hover {
+    background-color: #347eff;
+ } 
+ .search__button:active {
+    background-color: #2a65cc;
+ } 
+ @media all and (max-width: 768px) {
+   .search__button {
+      height: 56px;
+      max-width: 120px;
+      width: 100%;
+   }
+}
+ @media all and (max-width: 320px) {
+   .search__button {
+      height: 56px;
+      max-width: 297px;
+      width: 100%;
+   }
+}
+ 

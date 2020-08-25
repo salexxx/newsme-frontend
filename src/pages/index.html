@@ -12,27 +12,28 @@
 </head>
 <body>
   <header class="header">
+    <div class="header__background"></div>
     <img class="popupmenu__icon" src="<%=require('../images/menu.png').default%>" alt="menu">
       <p class="header__logo header__logo_white">NewsExplorer</p>
       <nav class="header__nav">
         <a href="./index.html" class="header__nav header__nav_active">Главная</a>
         <a href="./articles.html" class="header__nav ">Сохранённые статьи</a>
         <button class="header__nav header__nav_button">Авторизоваться</button>
-        <button class="header__nav header__nav_button header__nav_disable">Грета
+        <button class="header__nav header__nav_button header__nav_disable">Грета 
           <image  src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button>
       </nav>
-      <div class="header__background"></div>
   </header>
 
-  <section class="search-section">
-    <div class="search-section_intro">
-      <p class="search-section_intro search-section_intro__title">Что в мире творится?</p>
-      <p class="search-section_intro search-section_intro__subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете</p>
+  <section class="search">
+    <div class="search__intro">
+      <p class="search__intro search__intro_title">Что в мире творится?</p>
+      <p class="search__intro search__intro_subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете</p>
     </div>
-      <form class="search-section_form">
-        <input class="search-section_input" type="text" placeholder="Введите тему новости">
-        <button type="submit" class="search-section_button">Искать</button>
+      <form class="search__form">
+        <input class="search__input" type="text" placeholder="Введите тему новости">
+        <button type="submit" class="search__button">Искать</button>
+        </input>
       </form>
   </section>
 

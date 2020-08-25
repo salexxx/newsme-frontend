@@ -1,0 +1,26 @@
+@import url('./__intro/search__intro.css');
+@import url('./__input/search__input.css');
+@import url('./__form/search__form.css');
+@import url('./__button/search__button.css');
+.search {
+    color: #fff;
+    height: 495px;
+    max-width: 608px;
+    margin: 0px auto;
+/*     margin-bottom: 87px;
+ */
+}
+@media all and (max-width: 768px) {
+    .search {
+        height: 319px;
+        max-width: 448px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@media all and (max-width: 320px) {
+    .search {
+        height: 455px;
+    }
+}
