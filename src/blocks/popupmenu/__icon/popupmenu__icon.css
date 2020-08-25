@@ -7,7 +7,7 @@
     cursor: pointer;
    
 }
-@media all and (min-width: 663px) {
+@media all and (min-width: 664px) {
     .popupmenu__icon {
        display: none;
     }
