@@ -1,5 +1,5 @@
 
-.header_logo {
+.header__logo {
     font-family: 'RobotoSlabBold', sans-serif; 
     font-weight: 700;
     font-size: 20px;
@@ -7,9 +7,9 @@
     margin: 0;
    /*  padding-left: 104px; */
 }
-.header_logo__white {
+.header__logo_white {
     color: #fff;
 }
-.header_logo__black {
+.header__logo_black {
     color: #1a1b22;
 }

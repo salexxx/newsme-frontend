@@ -1,6 +1,6 @@
-@import url('./_logo/header_logo.css');
-@import url('./_nav/header_nav.css');
-@import url('./_background/header_background.css');
+@import url('./__logo/header__logo.css');
+@import url('./__nav/header__nav.css');
+@import url('./__background/header__background.css');
 
 .header {
     position: relative;

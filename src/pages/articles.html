@@ -12,12 +12,13 @@
 </head>
 <body>
   <header class="header">
-      <p class="header_logo header_logo__black">NewsExplorer</p>
-      <nav class="header_nav">
-        <a href="./index.html" class="header_nav header_nav__black">Главная</a>
-        <a href="./articles.html" class="header_nav header_nav__black header_nav__active-black">Сохранённые статьи</a>
-        <button class="header_nav header_nav__button header_nav__disable">Авторизоваться</button>
-        <button class="header_nav header_nav__button header_nav__button-black header_nav__black">Грета
+    <img class="popupmenu__icon" src="<%=require('../images/menu_black.png').default%>" alt="menu">
+      <p class="header__logo header__logo_black">NewsExplorer</p>
+      <nav class="header__nav">
+        <a href="./index.html" class="header__nav header__nav_black">Главная</a>
+        <a href="./articles.html" class="header__nav header__nav_black header__nav_active-black">Сохранённые статьи</a>
+        <button class="header__nav header__nav_button header__nav_disable">Авторизоваться</button>
+        <button class="header__nav header__nav_button header__nav_button-black header__nav_black">Грета
           <image  src="<%=require('../images/exit.png').default%>" alt="exit">
         </button>
       </nav>
@@ -31,70 +32,70 @@
       <div class="result-section_articles">
   
       <figure class="article">
-          <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article_image">
-          <div class="article_content">
-              <p class="article_date">2 августа, 2019</p>
-              <h4 class="article_title">Национальное достояние – парки</h4>
-              <p class="article_text">В 2016 году Америка отмечала важный юбилей:
+          <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article__image">
+          <div class="article__content">
+              <p class="article__date">2 августа, 2019</p>
+              <h4 class="article__title">Национальное достояние – парки</h4>
+              <p class="article__text">В 2016 году Америка отмечала важный юбилей:
               сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
               где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article_source">ДЗЕН</p>
+              <p class="article__source">ДЗЕН</p>
           </div>
-          <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
-          <button class="article_bookmark article_bookmark__trash"></button>
+          <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
+          <button class="article__bookmark article__bookmark_trash"></button>
       </figure>
   
       <figure class="article">
-          <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article_image">
-          <div class="article_content">
-              <p class="article_date">2 августа, 2019</p>
-              <h4 class="article_title">Лесные огоньки: история одной фотографии</h4>
-              <p class="article_text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+          <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article__image">
+          <div class="article__content">
+              <p class="article__date">2 августа, 2019</p>
+              <h4 class="article__title">Лесные огоньки: история одной фотографии</h4>
+              <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
                   из местных чудес природы.</p>
-              <p class="article_source">Афиша</p>
+              <p class="article__source">Афиша</p>
           </div>
-          <button class="article_tooltip ">Убрать из сохраненных</button>
-          <button class="article_bookmark article_bookmark__trash"></button>
+          <button class="article__tooltip ">Убрать из сохраненных</button>
+          <button class="article__bookmark article__bookmark_trash"></button>
       </figure>
   
       <figure class="article">
-         <img src="<%=require('../images/image_05.png').default%>" alt="article image" class="article_image">
-         <div class="article_content">
-            <p class="article_date">2 августа, 2019</p>
-            <h4 class="article_title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-            <p class="article_text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="article_source">Медиазона</p>
+         <img src="<%=require('../images/image_05.png').default%>" alt="article image" class="article__image">
+         <div class="article__content">
+            <p class="article__date">2 августа, 2019</p>
+            <h4 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
+            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+            <p class="article__source">Медиазона</p>
         </div>
-        <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
-        <button class="article_bookmark article_bookmark__trash"></button>
+        <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
+        <button class="article__bookmark article__bookmark_trash"></button>
       </figure>
    
 
     <figure class="article">
-      <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article_image">
-      <div class="article_content">
-          <p class="article_date">2 августа, 2019</p>
-          <h4 class="article_title">Национальное достояние – парки</h4>
-          <p class="article_text">В 2016 году Америка отмечала важный юбилей:
+      <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article__image">
+      <div class="article__content">
+          <p class="article__date">2 августа, 2019</p>
+          <h4 class="article__title">Национальное достояние – парки</h4>
+          <p class="article__text">В 2016 году Америка отмечала важный юбилей:
           сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
           где и сегодня каждый может приобщиться к природе.</p>
-          <p class="article_source">ДЗЕН</p>
+          <p class="article__source">ДЗЕН</p>
       </div>
-      <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
-      <button class="article_bookmark article_bookmark__trash"></button>
+      <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
+      <button class="article__bookmark article__bookmark_trash"></button>
   </figure>
 
   <figure class="article">
-    <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article_image">
-    <div class="article_content">
-        <p class="article_date">2 августа, 2019</p>
-        <h4 class="article_title">Лесные огоньки: история одной фотографии</h4>
-        <p class="article_text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+    <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article__image">
+    <div class="article__content">
+        <p class="article__date">2 августа, 2019</p>
+        <h4 class="article__title">Лесные огоньки: история одной фотографии</h4>
+        <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
             из местных чудес природы.</p>
-        <p class="article_source">Афиша</p>
+        <p class="article__source">Афиша</p>
     </div>
-    <button class="article_tooltip article_tooltip__disabled">Убрать из сохраненных</button>
-    <button class="article_bookmark article_bookmark__trash"></button>
+    <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
+    <button class="article__bookmark article__bookmark_trash"></button>
   </figure>
       </div>
 </section>

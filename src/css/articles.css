@@ -4,6 +4,7 @@
 @import url('../blocks/result-section/result-section.css');
 @import url('../blocks/article/article.css');
 @import url('../blocks/footer/footer.css');
+@import url(../blocks/popupmenu/popupmenu.css);
 
 
 body {

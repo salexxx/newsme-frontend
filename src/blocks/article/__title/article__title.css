@@ -1,4 +1,4 @@
-.article_title {
+.article__title {
     font-family: 'RobotoSlabRegular';
     font-weight: normal;
     font-size: 26px;
@@ -7,7 +7,7 @@
    
 }
 @media all and (max-width: 1000px) {
-    .article_title {
+    .article__title {
      font-size: 22px;
     }
 }
