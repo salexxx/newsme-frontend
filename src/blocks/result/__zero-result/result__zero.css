@@ -1,4 +1,4 @@
-.result-section_zero-result {
+.result__zero {
     height: 294px;
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     margin: auto;
     padding-top: 80px;
 }
-.result-section_zero-result__title {
+.result__zero_title {
 font-family: 'RobotoSlabRegular';
 font-size: 26px;
 font-weight: normal;

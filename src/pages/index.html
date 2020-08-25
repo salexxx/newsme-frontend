@@ -37,22 +37,22 @@
       </form>
   </section>
 
-  <section class="result-section"> 
+  <section class="result"> 
 
-  <div class="result-section_preloader">
+  <div class="result__preloader">
     <div class="circle-preloader"></div>
-    <span class="result-section_span">Идет поиск новостей...</span>
+    <span class="result__span">Идет поиск новостей...</span>
   </div>
 
-  <div class="result-section_zero-result">
+  <div class="result__zero">
     <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
-    <span class="result-section_zero-result__title">Ничего не найдено</span>
-    <span class="result-section_span">К сожалению по вашему запросу ничего не найдено.</span>
+    <span class="result__zero_title">Ничего не найдено</span>
+    <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
   </div>
 
-  <h2 class="result-section_title">Результаты поиска</h2>
+  <h2 class="result__title">Результаты поиска</h2>
     
-    <div class="result-section_articles">
+    <div class="result__articles">
 
     <figure class="article">
         <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
@@ -77,7 +77,7 @@
                 из местных чудес природы.</p>
             <p class="article__source">Медуза</p>
         </div>
-        <button class="article__tooltip article_tooltip_disabled">Войдите, чтобы сохранять статьи</button>
+        <button class="article__tooltip article__tooltip_disabled">Войдите, чтобы сохранять статьи</button>
         <button class="article__bookmark article__bookmark_normal"></button>
     </figure>
 
@@ -93,7 +93,7 @@
       <button class="article__bookmark article__bookmark_normal"></button>
     </figure>
   </div>
-  <button class="result-section_button">Показать ещё</button>
+  <button class="result__button">Показать ещё</button>
   </section>
 
   <footer class="footer">

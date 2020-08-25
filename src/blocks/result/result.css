@@ -1,0 +1,10 @@
+@import url('./__preloader/result__preloader.css');
+@import url('./__span/result__span.css');
+@import url('./__title/result__title.css');
+@import url('./__zero-result/result__zero.css');
+@import url('./__articles/result__articles.css');
+@import url('./__button/result__button.css');
+.result {
+    background-color: #f5f6f7;
+   
+}

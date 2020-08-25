@@ -1,4 +1,4 @@
-.result-section_articles {
+.result__articles {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: .5rem; 
@@ -6,20 +6,20 @@
 }
 
 @media all and (max-width: 768px) {
-    .result-section_articles{
+    .result__articles{
         grid-template-columns: repeat(2, 1fr);
         padding: 64px 40px;
     }
 }
 
 @media all and (max-width: 550px) {
-    .result-section_articles{
+    .result__articles{
         grid-template-columns: 1fr;
         padding: 30px 16px;
     }
 }
 @media all and (max-width: 860px) {
-    .result-section_articles{
+    .result__articles{
         padding: 3% 16px;
     }
 }

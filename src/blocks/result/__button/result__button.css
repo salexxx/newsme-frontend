@@ -1,15 +1,15 @@
-.result-section_button {
+.result__button {
     background: #FFFFFF;
     width: 288px;
     height: 64px;
-    align-self: center; 
+    margin:  auto 64px;
     font-family: 'RobotoRegular';
     font-size: 18px;
     border: none;
-    margin-bottom: 64px; 
     border-radius: 80px;
+    
 }
-.result-section_button:hover{
+.result__button:hover{
     opacity: 0.9;
     cursor: pointer;
 }

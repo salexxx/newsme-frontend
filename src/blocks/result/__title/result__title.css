@@ -1,4 +1,4 @@
-.result-section_title {
+.result__title {
     font-family: 'RobotoSlabRegular';
     font-size: 40px;
     color: #1a1b22;
@@ -7,16 +7,16 @@
     font-weight: normal;
     margin: 0;
 }
-.result-section_title-saved {
+.result__title_saved {
 max-width: 530px;
 padding-top: 28px;
 }
-.result-section_uptitle {
+.result__uptitle {
     font-size: 18px;
     color: rgba(26, 27, 34, .5);
     font-weight: normal;
 }
-.result-section_subtitle {
+.result__subtitle {
     font-family: 'RobotoRegular';
     padding-top: 28px;
     padding-bottom: 56px;
@@ -24,18 +24,18 @@ padding-top: 28px;
     color: #1a1b22;
     font-weight: normal;
 }
-.result-section_subtitle-bold {
+.result__subtitle_bold {
  
     font-weight: bold;
 }
 @media all and (max-width: 760px) {
-    .result-section_title {
+    .result__title {
      font-size: 30px;
     }
-    .result-section_uptitle {
+    .result__uptitle {
         font-size: 12px;
     }
-    .result-section_subtitle {
+    .result__subtitle {
         font-size: 12px;
     }
 }
