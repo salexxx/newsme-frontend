@@ -5,7 +5,7 @@
     padding: 6% 104px;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 700px) {
     .result__articles{
         grid-template-columns: repeat(2, 1fr);
         padding: 64px 40px;
