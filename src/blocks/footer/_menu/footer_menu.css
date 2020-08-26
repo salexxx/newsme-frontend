@@ -42,8 +42,8 @@
     font-size: 18px;
 }
 .footer_menu-nav {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    width: 400px;
+    max-width: 400px;
  
  }

@@ -34,3 +34,8 @@ padding-top: 10%;
         padding-bottom: 35%; 
     }
 }
+@media all and (max-width: 230px) {
+    .search__intro_title {
+        font-size: 26px; 
+    }
+}

@@ -18,7 +18,7 @@
       <nav class="header__nav">
         <a href="./index.html" class="header__nav header__nav_active">Главная</a>
         <a href="./articles.html" class="header__nav ">Сохранённые статьи</a>
-        <button class="header__nav header__nav_button">Авторизоваться</button>
+        <button class="header__nav header__nav_button header__nav_disable">Авторизоваться</button>
         <button class="header__nav header__nav_button ">Грета 
           <image class="header__nav_img" src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button>
@@ -37,7 +37,7 @@
       </form>
   </section>
 
-  <section class="result"> 
+   <section class="result"> 
 
   <div class="result__preloader">
     <div class="circle-preloader"></div>
@@ -93,10 +93,10 @@
       <button class="article__bookmark article__bookmark_normal"></button>
     </figure>
   </div>
-  <button class="result__button">Показать ещё</button>
-  </section>
+   <button class="result__button">Показать ещё</button> 
+  </section> 
 
-  <footer class="footer">
+<!--   <footer class="footer">
     <figure class="footer_about">
       <img class="footer_image" src="<%=require('../images/author.png').default%>" alt="authors photo">
       <figcaption class="footer_figcaption">
@@ -120,7 +120,7 @@
               </a>
       </nav>
     </div>
-  </footer>
+  </footer> -->
 
   <div class="popupmenu" style="display: none;"> <!-- style="display: none;" -->
     <nav class="popupmenu__content">
@@ -195,6 +195,6 @@
       </div>
     </div>
   
-  <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> -->
+  <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> 
  </body>
 </html>
