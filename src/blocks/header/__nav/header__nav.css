@@ -37,6 +37,9 @@
     padding: 0px 15px;
     
 }
+.header__nav_img {
+    margin-left: 10px;
+}
 .header__nav_button-black {
     border: 1px solid #d1d2d6;
 }
