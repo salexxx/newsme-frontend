@@ -28,9 +28,11 @@ padding-top: 28px;
  
     font-weight: bold;
 }
-@media all and (max-width: 760px) {
+@media all and (max-width: 768px) {
     .result__title {
+     max-width: 336px;   
      font-size: 30px;
+     padding-left: 6%;
     }
     .result__uptitle {
         font-size: 12px;
