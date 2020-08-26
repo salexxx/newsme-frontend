@@ -15,14 +15,14 @@
     <div class="header__background"></div>
     <img class="popupmenu__icon" src="<%=require('../images/menu.png').default%>" alt="menu">
       <p class="header__logo header__logo_white">NewsExplorer</p>
-      <nav class="header__nav">
-        <a href="./index.html" class="header__nav header__nav_active">Главная</a>
-        <a href="./articles.html" class="header__nav ">Сохранённые статьи</a>
-        <button class="header__nav header__nav_button header__nav_disable">Авторизоваться</button>
-        <button class="header__nav header__nav_button ">Грета 
+      <ul class="header__nav">
+        <li class="header__nav_hover"><a href="./index.html" class="header__nav header__nav_active">Главная</a></li>
+        <li class="header__nav_hover"><a href="./articles.html" class="header__nav ">Сохранённые статьи</a></li>
+        <li class="header__nav_hover"><button class="header__nav header__nav_button header__nav_disable">Авторизоваться</button></li>
+        <li class="header__nav_hover"><button class="header__nav header__nav_button ">Грета 
           <image class="header__nav_img" src="<%=require('../images/exit-white.png').default%>" alt="exit">
-        </button>
-      </nav>
+        </button></li>
+      </ul>
   </header>
 
   <section class="search">

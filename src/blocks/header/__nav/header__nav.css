@@ -7,9 +7,13 @@
     font-size: 18px;
     cursor: pointer;
     margin-left: 32px;
+    list-style-type: none;
 }
 .header__nav:focus {
     outline: none;
+}
+.header__nav_hover:hover {
+    opacity: .7;
 }
 .header__nav_black {
     color: #1a1b22;
