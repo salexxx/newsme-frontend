@@ -11,8 +11,14 @@
     left: 50%;
     transform: translate(-50%, 0);
     outline: none;
+    margin-bottom: 80px;
 }
 .result__button:hover{
     opacity: 0.8;
     cursor: pointer;
+}
+@media all and (max-width: 768px) {
+    .result__button {
+        margin-bottom: 40px;
+    }
 }
