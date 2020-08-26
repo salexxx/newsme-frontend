@@ -12,6 +12,7 @@
     .footer_menu{
         margin: 24px 40px 18px;
     }
+
 }
 
 @media all and (max-width: 550px) {
@@ -19,8 +20,11 @@
         flex-direction: column;
         margin: 16px 20px 16px;
     }
+    .footer_menu_copyrigth {
+        order: 1;
+    }
 }
-.footer_menu-copyrigth{
+.footer_menu_copyrigth{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -31,7 +35,7 @@
 }
 
 @media all and (max-width: 550px) {
-    .footer_menu-copyrigth{
+    .footer_menu_copyrigth{
         order: 2;
     }
 }
@@ -40,6 +44,9 @@
     color: #1a1b22;
     font-family: 'RobotoRegular'; 
     font-size: 18px;
+}
+.footer_menu-link:hover {
+    opacity: .8;
 }
 .footer_menu-nav {
     display: flex;
