@@ -23,24 +23,17 @@
     display: flex;
     justify-content: space-between;
 
-     /* padding-right: 3%;
-    padding-left: 3%; */
 }
-
-
 
     .footer_menu-list {
         padding-inline-start: 0;
         display: flex;
-/*         justify-content: space-between;
- */        margin: 0;
-/*         margin-right: 5% ;
- */   }
+        margin: 0;
+   }
 
    
 
 .footer_menu-link {
-    
     text-decoration: none;
     color: #1a1b22;
     font-family: 'RobotoRegular'; 
@@ -52,12 +45,6 @@
 .footer_menu-link:hover {
     opacity: .8;
 }
-
-/*  @media all and (max-width: 550px) {
-    .footer_menu{
-        flex-direction: column;
-   }
-} */
 
 
 @media all and (max-width: 684px) {

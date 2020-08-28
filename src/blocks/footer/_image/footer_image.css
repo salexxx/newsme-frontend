@@ -5,3 +5,8 @@
     margin-top: 40px;
     margin-bottom: 80px; 
 }
+@media all and (max-width: 700px) {
+    .footer_image {
+        margin-bottom: 40px;
+    }
+}
