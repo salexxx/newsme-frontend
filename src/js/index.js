@@ -1,5 +1,10 @@
 import '../css/style.css';
 import NewsApi from './api/NewsApi';
+import NewsCard from './components/NewsCard';
+import ResultList from './components/ResultList';
+
+let cardsArray = [];
+const cardlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
 
 const url = 'http://newsapi.org/v2/everything?'
           + 'q=Sport&'
@@ -10,4 +15,19 @@ const url = 'http://newsapi.org/v2/everything?'
 const req = new Request(url);
 
 const news = new NewsApi(req);
-console.log(news.getNews());
+news.getNews()
+  .then((res) => {
+    cardsArray = res.articles.map((elem) => {
+      const newscard = new NewsCard(
+        elem.title,
+        elem.description,
+        elem.publishedAt,
+        elem.url,
+        elem.urlToImage,
+        elem.source.name,
+      );
+      return newscard.create();
+    });
+    cardlist.render(cardsArray);
+    console.log(cardsArray);
+  });
