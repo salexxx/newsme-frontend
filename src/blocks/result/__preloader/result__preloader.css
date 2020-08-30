@@ -7,3 +7,6 @@
     /* margin: auto; */
    /*  padding-top: 80px; */
 }
+.invisible {
+    display: none;
+}

@@ -9,6 +9,7 @@ const cardlist = new ResultList(document.querySelector('.result__articles'), car
 
 document.forms.searchForm.onsubmit = (e) => {
   e.preventDefault();
+  cardlist.renderLoader();
   const news = new NewsApi(e.target.elements.input.value);
   news.getNews()
     .then((res) => {
@@ -23,6 +24,7 @@ document.forms.searchForm.onsubmit = (e) => {
         );
         return newscard.create();
       });
-      cardlist.render(cardsArray);
+      cardlist.renderLoader();
+      cardlist.renderResults(cardsArray);
     });
 };
