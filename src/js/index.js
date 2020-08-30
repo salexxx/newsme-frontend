@@ -5,6 +5,7 @@ import ResultList from './components/ResultList';
 
 let cardsArray = [];
 const cardlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
+const searchButton = document.querySelector('.search__button');
 
 const url = 'http://newsapi.org/v2/everything?'
           + 'q=Sport&'
@@ -29,5 +30,11 @@ news.getNews()
       return newscard.create();
     });
     cardlist.render(cardsArray);
-    console.log(cardsArray);
   });
+
+searchButton.addEventListener('submit', () => {
+  document.forms.searchForm.onsubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+  };
+});

@@ -31,8 +31,8 @@
       <p class="search__intro search__intro_title">Что в мире творится?</p>
       <p class="search__intro search__intro_subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете</p>
     </div>
-      <form class="search__form">
-        <input required class="search__input" type="text" placeholder="Введите тему новости">
+      <form id="searchForm" class="search__form">
+        <input  required class="search__input" type="text" placeholder="Введите тему новости">
         <button type="submit" class="search__button">Искать</button></input>
       </form>
   </section>
@@ -52,7 +52,7 @@
 
   <h2 class="result__title">Результаты поиска</h2>
     
-    <div class="result__articles">
+   
 <template class="article">
     <figure class="article">
         <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
@@ -68,6 +68,7 @@
         <button class="article__bookmark article__bookmark_normal"></button>
       </figure>
 </template>
+<div class="result__articles">
  <!--    <figure class="article">
         <img src="<%=require('../images/image_04.png').default%>" alt="article image" class="article__image">
         <div class="article__content">
