@@ -41,6 +41,15 @@
     padding: 0px 15px;
     
 }
+.header__nav_button-exit {
+    
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    height: 48px;
+    padding: 0px 15px;
+    
+}
 .header__nav_img {
     margin-left: 10px;
 }

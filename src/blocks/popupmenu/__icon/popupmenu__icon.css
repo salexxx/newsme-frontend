@@ -12,3 +12,6 @@
        display: none;
     }
 }
+.popupmenu__icon:hover {
+    opacity: .7;
+}
