@@ -23,6 +23,15 @@
           <image class="header__nav_img" src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button></li>
       </ul>
+    <!--   <nav class="popup__content_mobile" id="mobilemenu">
+        <img src="<%=require('../images/back.png').default%>" alt="" class="popupmenu__close">
+        <p class="header header_logo header_logo__white">NewsExplorer</p>
+        <nav class="popupmenu__nav">
+          <a href="./index.html" class="popupmenu__nav">Главная</a>
+          <a href="./articles.html" class="popupmenu__nav">Сохранённые статьи</a>
+          <button class="header__nav header__nav_button ">Авторизоваться</button>
+        </nav>
+      </nav> -->
   </header>
 
   <section class="search">
@@ -67,32 +76,9 @@
         <button class="article__bookmark article__bookmark_normal"></button>
       </figure>
 </template>
-<div class="result__articles">
- <!--    <figure class="article">
-        <img src="<%=require('../images/image_04.png').default%>" alt="article image" class="article__image">
-        <div class="article__content">
-            <p class="article__date">2 августа, 2019</p>
-            <h4 class="article__title">Лесные огоньки: история одной фотографии</h4>
-            <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                из местных чудес природы.</p>
-            <p class="article__source">Медуза</p>
-        </div>
-        <button class="article__tooltip article__tooltip_disabled">Войдите, чтобы сохранять статьи</button>
-        <button class="article__bookmark article__bookmark_normal"></button>
-    </figure>
 
-    <figure class="article">
-       <img src="<%=require('../images/image_07.png').default%>" alt="article image" class="article__image">
-       <div class="article__content">
-          <p class="article__date">2 августа, 2019</p>
-          <h4 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-          <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-          <p class="article__source">Риа</p>
-      </div>
-      <button class="article__tooltip ">Войдите, чтобы сохранять статьи</button>
-      <button class="article__bookmark article__bookmark_normal"></button>
-    </figure> -->
-  </div>
+<div class="result__articles">
+</div>
   
    <button class="result__button">Показать ещё</button> 
   
@@ -126,22 +112,11 @@
     </div>
   </footer> 
 
-  <div class="popupmenu" id="mobilemenu" style="display: none;"> <!-- style="display: none;" -->
-    <nav class="popupmenu__content">
-      
-      <img src="<%=require('../images/back.png').default%>" alt="" class="popupmenu__close">
-      <p class="header header_logo header_logo__white">NewsExplorer</p>
-      <nav class="popupmenu__nav">
-        <a href="./index.html" class="popupmenu__nav">Главная</a>
-        <a href="./articles.html" class="popupmenu__nav">Сохранённые статьи</a>
-        <button class="popupmenu_nav popupmenu__button">Авторизоваться</button>
-      </nav>
-    </nav>
-  </div>
  
-    <div class="popup" id="authoriz" style="display: none;" > <!-- style="display: none;" -->
-      <div class="popup__content">
-        <img src="<%=require('../images/close.svg').default%>" alt="" class="popup__close">
+    <div class="popup"> 
+     
+     <div class="popup__content" id="authoriz">
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Вход</h3>
         <form class="popup__form" >
             <div class="popup__form">
@@ -156,14 +131,12 @@
             </div>
             <div class="popup__content-center">
             <button type="submit" class="button popup__button">Войти</button>
-             <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Зарегистрироваться</a>
+             <a class="popup__invitation toggle-to-authen" href="#"><span class="popup__input-subtext">или </span>Зарегистрироваться</a>
             </div>
         </form>
       </div>
-    </div>
-    
-    <div class="popup" id="authen"  style="display: none;"> <!-- style="display: none;" -->
-      <div class="popup__content">
+
+      <div class="popup__content" id="authen" >
         <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Регистрация</h3>
         <form  class="popup__form" >
@@ -185,19 +158,20 @@
               <div class="popup__content-center">
               <span class="popup__error-message">Такой пользователь уже есть</span>
             <button type="submit" class="button popup__button">Зарегистрироваться</button>
-            <a class="popup__invitation" href=""><span class="popup__input-subtext">или </span>Войти</a>
+            <a class="popup__invitation toggle-to-authoriz" href="#"><span class="popup__input-subtext">или </span>Войти</a>
               </div>
         </form>
       </div>
-    </div>
-
-    <div class="popup" id="authen-success" style="display: none;"> <!-- style="display: none;" -->
-      <div class="popup__content">
+      
+      <div class="popup__content" id="authen-success">
         <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
         <a class="popup__invitation popup__invitation-bold" href="">Выполнить вход</a>
       </div>
+       
     </div>
+    
+  
   
   <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> 
  </body>
