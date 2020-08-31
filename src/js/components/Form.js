@@ -7,27 +7,14 @@ export default class Form {
 
   setEventListener() {
     const inputElements = Array.from(this.inputs);
-    console.log(inputElements);
-    // debugger;
     this.form.addEventListener('input', () => {
       if (inputElements.every((input) => this.checkInputValidity(input))) {
         this.button.removeAttribute('disabled', true);
       } else this.button.setAttribute('disabled', true);
     });
-   /*  if (!inputElements.every((input) => this.checkInputValidity(input))) {
-      this.button.setAttribute('disabled', true);
-    } */
   }
 
-  /*  setSubmitButtonState(input) {
-    if (!this.checkInputValidity(input)) {
-      this.button.setAttribute('disabled', true);
-      return false;
-    }
-    this.button.removeAttribute('disabled', true);
-    return true;
-  } */
-
+  // eslint-disable-next-line class-methods-use-this
   checkInputValidity(input) {
     const errElem = input.nextElementSibling;
     const errorMessages = {
