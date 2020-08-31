@@ -3,6 +3,7 @@ import NewsApi from './api/NewsApi';
 import NewsCard from './components/NewsCard';
 import ResultList from './components/ResultList';
 import Popup from './components/Popup';
+import Form from './components/Form';
 
 // const searchButton = document.querySelector('.search__button');
 let cardsArray = [];
@@ -20,15 +21,13 @@ const popupAuthoriz = new Popup('authoriz');
 const popupAuthen = new Popup('authen');
 const toggletoAuthen = document.querySelector('.toggle-to-authen');
 const toggletoAuthoriz = document.querySelector('.toggle-to-authoriz');
-// const close = document.querySelector('.popup__close');
-
-/* close.addEventListener('click', () => {
-  popupAuthen.close();
-}); */
+const formAuthen = new Form(document.querySelector('#registration'));
+const formAuthoriz = new Form(document.querySelector('#authorization'));
 
 toggletoAuthen.onclick = () => {
   popupAuthoriz.close();
   popupAuthen.open();
+  formAuthen.setEventListener();
 };
 toggletoAuthoriz.onclick = () => {
   popupAuthen.close();
@@ -37,11 +36,8 @@ toggletoAuthoriz.onclick = () => {
 
 authoriz.addEventListener('click', () => {
   popupAuthoriz.open();
+  formAuthoriz.setEventListener();
 });
-
-
-
- 
 
 document.forms.searchForm.onsubmit = (e) => {
   e.preventDefault();

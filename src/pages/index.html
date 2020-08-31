@@ -118,15 +118,15 @@
      <div class="popup__content" id="authoriz">
         <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Вход</h3>
-        <form class="popup__form" >
+        <form id="authorization" class="popup__form" >
             <div class="popup__form">
             <span class="popup__invitation">Email</span>
-            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
-            <span class="popup__error-message">Не правильный формат email</span>
+            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+            <span class="popup__error-message"></span>
             </div>
             <div class="popup__form">
             <span class="popup__invitation">Пароль</span>
-            <input type="password" class="popup__input" placeholder="Введите пароль">
+            <input type="password" class="popup__input" placeholder="Введите пароль" required minlength="2" maxlength="30">
             <span class="popup__error-message"></span>
             </div>
             <div class="popup__content-center">
@@ -139,24 +139,24 @@
       <div class="popup__content" id="authen" >
         <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
         <h3 class="popup__title">Регистрация</h3>
-        <form  class="popup__form" >
+        <form id="registration" class="popup__form" >
             <div class="popup__form">
             <span class="popup__invitation">Email</span>
-            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту">
-            <span class="popup__error-message">Не правильный формат email</span>
+            <input type="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+            <span class="popup__error-message"></span>
             </div>
             <div class="popup__form">
             <span class="popup__invitation">Пароль</span>
-            <input type="password" class="popup__input" placeholder="Введите пароль" >
+            <input type="password" class="popup__input" placeholder="Введите пароль" required minlength="2" maxlength="30" >
             <span class="popup__error-message"></span>
             </div>
             <div class="popup__form">
               <span class="popup__invitation">Имя</span>
-              <input type="text"  class="popup__input" placeholder="Введите пароль" >
+              <input type="text"  class="popup__input" placeholder="Введите имя" required minlength="2" maxlength="30" >
               <span class="popup__error-message"></span>
               </div>
               <div class="popup__content-center">
-              <span class="popup__error-message">Такой пользователь уже есть</span>
+              <span class="popup__error-message"></span>
             <button type="submit" class="button popup__button">Зарегистрироваться</button>
             <a class="popup__invitation toggle-to-authoriz" href="#"><span class="popup__input-subtext">или </span>Войти</a>
               </div>
