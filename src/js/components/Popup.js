@@ -2,7 +2,7 @@ export default class Popup {
   constructor(contentId) {
     this.content = document.querySelector(`#${contentId}`);
     this.popup = document.querySelector('.popup');
-    this.closebtn = document.querySelector('.popup__close');
+    this.closebtn = this.content.querySelector('.popup__close');
     this.closebtn.addEventListener('click', this.close.bind(this));
   }
 
