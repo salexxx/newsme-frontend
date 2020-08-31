@@ -19,11 +19,14 @@ mobilemenu.addEventListener('click', () => {
 const authoriz = document.querySelector('.header__nav_button');
 const popupAuthoriz = new Popup('authoriz');
 const popupAuthen = new Popup('authen');
+const popupSuccess = new Popup('success');
 const toggletoAuthen = document.querySelector('.toggle-to-authen');
 const toggletoAuthoriz = document.querySelector('.toggle-to-authoriz');
+const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
 
+// навигация между popups
 toggletoAuthen.onclick = () => {
   popupAuthoriz.close();
   popupAuthen.open();
@@ -33,12 +36,30 @@ toggletoAuthoriz.onclick = () => {
   popupAuthen.close();
   popupAuthoriz.open();
 };
-
+successtoAuthorize.onclick = () => {
+  popupSuccess.close();
+  popupAuthoriz.open();
+};
+//
+// слушатель кнопки авторизации
 authoriz.addEventListener('click', () => {
   popupAuthoriz.open();
   formAuthoriz.setEventListener();
 });
 
+// отправка формы регистрации
+document.forms.registration.onsubmit = (e) => {
+  e.preventDefault();
+  popupAuthen.close();
+  popupSuccess.open();
+};
+// отправка формы авторизации
+document.forms.authorization.onsubmit = (e) => {
+  e.preventDefault();
+  popupAuthoriz.close();
+};
+
+// отправка формы поиска новостей
 document.forms.searchForm.onsubmit = (e) => {
   e.preventDefault();
   cardlist.renderLoader();
@@ -58,5 +79,6 @@ document.forms.searchForm.onsubmit = (e) => {
       });
       cardlist.renderLoader();
       cardlist.renderResults(cardsArray);
-    });
+    })
+    .catch((err) => (new Error({ message: err })));
 };
