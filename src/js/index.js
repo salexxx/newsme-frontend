@@ -14,7 +14,10 @@ mobilemenu.addEventListener('click', () => {popupMenu.open();});
 
 const authoriz = document.querySelector('.header__nav_button');
 const popupAuthoriz = new Popup('authoriz');
-authoriz.addEventListener('click', () => {popupAuthoriz.open()});
+authoriz.addEventListener('click', () => {
+  popupAuthoriz.open();
+
+});
 
 
 document.forms.searchForm.onsubmit = (e) => {
