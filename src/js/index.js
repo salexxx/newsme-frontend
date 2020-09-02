@@ -4,6 +4,7 @@ import NewsCard from './components/NewsCard';
 import ResultList from './components/ResultList';
 import Popup from './components/Popup';
 import Form from './components/Form';
+import MainApi from './api/MainApi';
 
 // const searchButton = document.querySelector('.search__button');
 let cardsArray = [];
@@ -25,6 +26,10 @@ const toggletoAuthoriz = document.querySelector('.toggle-to-authoriz');
 const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
+
+const api = new MainApi({
+  baseUrl: 'http://localhost:3000',
+});
 
 // навигация между popups
 toggletoAuthen.onclick = () => {
@@ -56,13 +61,16 @@ document.forms.registration.onsubmit = (e) => {
 // отправка формы авторизации
 document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
+  console.log(e.target.elements.email);
+  api.signin(e.target.elements.email.value, e.target.elements.password.value)
+    .then((res) => console.log(res));
   popupAuthoriz.close();
 };
 
 // отправка формы поиска новостей
 document.forms.searchForm.onsubmit = (e) => {
   e.preventDefault();
-  cardlist.renderLoader();
+  // cardlist.renderLoader();
   const news = new NewsApi(e.target.elements.input.value);
   news.getNews()
     .then((res) => {
