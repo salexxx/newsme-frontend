@@ -55,16 +55,24 @@ authoriz.addEventListener('click', () => {
 // отправка формы регистрации
 document.forms.registration.onsubmit = (e) => {
   e.preventDefault();
+  api.signup(e.target.elements.email.value,
+    e.target.elements.password.value,
+    e.target.elements.name.value)
+    .then((res) => console.log(res.message));
   popupAuthen.close();
   popupSuccess.open();
 };
 // отправка формы авторизации
 document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
-  console.log(e.target.elements.email);
   api.signin(e.target.elements.email.value, e.target.elements.password.value)
-    .then((res) => console.log(res));
-  popupAuthoriz.close();
+    .then((res) => {
+      const { token } = res.json();
+      console.log('got token', token);
+      localStorage.setItem('token', token);
+      popupAuthoriz.close();
+    })
+    .catch((err) => console.log(err));
 };
 
 // отправка формы поиска новостей

@@ -12,13 +12,16 @@ export default class MainApi {
     return res.json();
   }
 
-  signup(email, name, password) {
+  signup(email, password, name) {
     return fetch(`${this.options.baseUrl}/signup`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         email,
-        name,
         password,
+        name,
       }),
     })
       .then((res) => this._getResponseData(res));
@@ -27,6 +30,9 @@ export default class MainApi {
   signin(email, password) {
     return fetch(`${this.options.baseUrl}/signin`, {
       method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
         email,
         password,
