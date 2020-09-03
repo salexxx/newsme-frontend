@@ -21,6 +21,7 @@ export default class Form {
       valueMissing: 'Это обязательное поле',
       tooShort: 'Должно быть от 2 до 30 символов',
       typeMismatch: 'Неправильный формат Email',
+      passTooShort: 'Длина пароля не менее 6 символов',
     };
     if (input.value === '') { return false; }
     if (!input.checkValidity()) {
@@ -29,6 +30,10 @@ export default class Form {
         return false;
       }
       if (input.validity.tooShort) {
+        if (input.name === 'password') {
+          errElem.textContent = errorMessages.passTooShort;
+          return false;
+        }
         errElem.textContent = errorMessages.tooShort;
         return false;
       }

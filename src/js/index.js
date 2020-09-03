@@ -58,21 +58,24 @@ document.forms.registration.onsubmit = (e) => {
   api.signup(e.target.elements.email.value,
     e.target.elements.password.value,
     e.target.elements.name.value)
-    .then((res) => console.log(res.message));
-  popupAuthen.close();
-  popupSuccess.open();
+    .then((res) => {
+      console.log(res);
+      popupAuthen.close();
+      popupSuccess.open();
+    })
+    .catch((err) => console.log(err.message));
 };
 // отправка формы авторизации
 document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
   api.signin(e.target.elements.email.value, e.target.elements.password.value)
     .then((res) => {
-      const { token } = res.json();
+      const { token } = res;
       console.log('got token', token);
       localStorage.setItem('token', token);
       popupAuthoriz.close();
     })
-    .catch((err) => console.log(err));
+    .catch((err) => console.log({ message: err }));
 };
 
 // отправка формы поиска новостей
