@@ -80,8 +80,8 @@ document.forms.authorization.onsubmit = (e) => {
 
 // отправка формы поиска новостей
 document.forms.searchForm.onsubmit = (e) => {
+  cardlist.renderLoader();
   e.preventDefault();
-  // cardlist.renderLoader();
   const news = new NewsApi(e.target.elements.input.value);
   news.getNews()
     .then((res) => {

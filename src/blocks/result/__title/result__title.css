@@ -41,3 +41,6 @@ padding-top: 28px;
         font-size: 12px;
     }
 }
+.result__title_invisible {
+    display: none;
+}

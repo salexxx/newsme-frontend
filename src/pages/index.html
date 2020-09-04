@@ -46,23 +46,23 @@
   </section>
  
    <section class="result"> 
+     
+      <div class="result__preloader invisible">
+       <div class="circle-preloader"></div>
+       <span class="result__span">Идет поиск новостей...</span>
+      </div>
 
-  <div class="result__preloader invisible">
-    <div class="circle-preloader"></div>
-    <span class="result__span">Идет поиск новостей...</span>
-  </div>
-
-  <div class="result__zero invisible">
-    <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
-    <span class="result__zero_title">Ничего не найдено</span>
-    <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
-  </div>
-
-  <h2 class="result__title">Результаты поиска</h2>
+    <div class="result__zero invisible">
+      <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
+      <span class="result__zero_title">Ничего не найдено</span>
+      <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
+    </div>
     
-   
+    <h2 class="result__title result__title_invisible">Результаты поиска</h2>
+  
+         
 <template class="article">
-    <figure class="article">
+     <figure class="article"> 
         <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
         <div class="article__content">
             <p class="article__date">2 августа, 2019</p>
@@ -74,15 +74,13 @@
         </div>
         <button class="article__tooltip article__tooltip_disabled">Войдите, чтобы сохранять статьи</button>
         <button class="article__bookmark article__bookmark_normal"></button>
-      </figure>
+     </figure>
 </template>
+<div class="result__articles result__articles_invisible">
+ </div>
+  <button class="result__button result__button_invisible">Показать ещё</button> 
 
-<div class="result__articles">
-</div>
-  
-   <button class="result__button">Показать ещё</button> 
-  
-  </section> 
+</section> 
 
     <footer class="footer">
     <figure class="footer_about">

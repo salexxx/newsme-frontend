@@ -5,6 +5,10 @@
     padding: 6% 104px;
 }
 
+ .result__articles_invisible {
+    display: none;
+} 
+
 @media all and (max-width: 700px) {
     .result__articles{
         grid-template-columns: repeat(2, 1fr);
