@@ -5,7 +5,10 @@
     font-size: 20px;
     line-height: 24px;
     margin: 0;
-   /*  padding-left: 104px; */
+    z-index: 100;
+ /*    border-bottom: 1px solid #A5A5A5;
+    padding-bottom: 27px;
+    margin-top: 32px; */
 }
 .header__logo_white {
     color: #fff;

@@ -1,0 +1,17 @@
+.header__open {
+    
+    width: 26px;
+    position: absolute;
+    top: 26px;
+    right: 36px;
+    cursor: pointer;
+   z-index: 100;
+}
+@media all and (min-width: 664px) {
+    .header__open {
+     display: none; 
+    }
+}
+.header__open:hover {
+    opacity: .7;
+}

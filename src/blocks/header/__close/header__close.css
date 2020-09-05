@@ -1,0 +1,11 @@
+.header__close {
+    width: 26px;
+    position: absolute;
+    top: 26px;
+    right: 36px;
+    cursor: pointer;
+    z-index: 100;
+  }
+.header__close:hover {
+    opacity: .7;
+}

@@ -13,25 +13,16 @@
 <body>
   <header class="header">
     <div class="header__background"></div>
-     <img class="popupmenu__icon" src="<%=require('../images/menu.png').default%>" alt="menu">
-      <p class="header__logo header__logo_white">NewsExplorer</p>
+     <img class="header__open" src="<%=require('../images/menu.png').default%>" alt="menu">
+     <img class="header__close" src="<%=require('../images/back.png').default%>" alt="close menu" > 
+     <p class="header__logo header__logo_white">NewsExplorer</p>
       <ul class="header__nav">
-        <li class="header__nav_hover"><a href="./index.html" class="header__nav header__nav_active">Главная</a></li>
-        <li class="header__nav_hover"><a href="./articles.html" class="header__nav ">Сохранённые статьи</a></li>
-        <li class="header__nav_hover"><button class="header__nav header__nav_button ">Авторизоваться</button></li>
-        <li class="header__nav_hover"><button class="header__nav header__nav_button-exit header__nav_disable ">Грета 
+        <li class="header__nav_list"><a href="./index.html" class="header__nav_link header__nav_active">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link ">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav_link header__nav_button ">Авторизоваться
           <image class="header__nav_img" src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button></li>
       </ul>
-    <!--   <nav class="popup__content_mobile" id="mobilemenu">
-        <img src="<%=require('../images/back.png').default%>" alt="" class="popupmenu__close">
-        <p class="header header_logo header_logo__white">NewsExplorer</p>
-        <nav class="popupmenu__nav">
-          <a href="./index.html" class="popupmenu__nav">Главная</a>
-          <a href="./articles.html" class="popupmenu__nav">Сохранённые статьи</a>
-          <button class="header__nav header__nav_button ">Авторизоваться</button>
-        </nav>
-      </nav> -->
   </header>
 
   <section class="search">
@@ -90,7 +81,7 @@
         <p class="footer_figcaption__text">Привет всем! Меня зовут Алексей Смолянинов. Я занимаюсь веб-разработкой. Интересуюсь информацией в области сетевой безопасности.
           <br>
           <br>
-        На курсах Яндекс.Практикум я познакомился с фронтенд и бэкенд программированием. Научился работать на JavaScript, HTML/CSS. Освоил Node.js, Webpack, Git, MongoDB. Теперь, использовав время самоизоляции на самообразование, я с удовольствием приступлю к работе над сайтом о котором давно мечтал - сайт Федерации любителей и ветеранов горнолыжного спорта.  </p>
+        Этот сайт является дипломной работой курса Яндекс.Практикум: Веб-разработчик. В процессе обучения я познакомился с фронтенд и бэкенд программированием. Научился работать на JavaScript, использовать варианты адаптивной верстки HTML/CSS с применением Grid, Flex. Серверная часть приложения - Node.js, MongoDB. Научился работать с Webpack, npm, Git. Теперь, использовав время самоизоляции на самообразование, я уверен что смогу реализовать более сложные проекты.  </p>
       </figcaption>
     </figure> 
     <div class="footer_menu">
