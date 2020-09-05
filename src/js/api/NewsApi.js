@@ -1,6 +1,6 @@
 export default class NewsApi {
   constructor(query) {
-    const url = 'http://newsapi.org/v2/everything?'
+    const url = 'http://nomoreparties.co/news/v2/everything?'
            + `q=${query}&`
            + 'from=2020-08-30&'
            + 'sortBy=popularity&'
