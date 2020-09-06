@@ -7,7 +7,7 @@
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    height: 80%;
+    height: 100%;
 }
 
 .header__nav_link {
@@ -71,14 +71,14 @@
        top: 0px;
        left: 0;
        flex-direction: column;
-       height: 286px;
+       height: 256px;
        max-width: 663px;
        width: 100%;
        background-color: #1a1b22;
        border-bottom-right-radius: 16px;
        border-bottom-left-radius: 16px;
        align-items: flex-start;
-       padding-top: 80px;
+       padding-top: 120px;
     }
     .header__nav_button {
        margin: 0 auto;
