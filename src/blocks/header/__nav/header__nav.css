@@ -54,6 +54,9 @@
 .header__nav_img {
     margin-left: 10px;
 }
+.invisible {
+    display: none;
+}
 .header__nav_button-black {
     border: 1px solid #d1d2d6;
 }
@@ -79,6 +82,7 @@
        border-bottom-left-radius: 16px;
        align-items: flex-start;
        padding-top: 120px;
+       display: none;
     }
     .header__nav_button {
        margin: 0 auto;

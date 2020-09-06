@@ -11,14 +11,26 @@
   <title>News Explorer</title>
 </head>
 <body>
-  <header class="header">
-    <img class="popupmenu__icon" src="<%=require('../images/menu_black.png').default%>" alt="menu">
+<!--   <header class="header">
+    <img class="header__icon" src="<%=require('../images/menu_black.png').default%>" alt="menu">
       <p class="header__logo header__logo_black">NewsExplorer</p>
       <ul class="header__nav">
-        <li class="header__nav_hover"><a href="./index.html" class="header__nav header__nav_black">Главная</a></li>
-        <li class="header__nav_hover"><a href="./articles.html" class="header__nav header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
-        <li class="header__nav_hover"><button class="header__nav header__nav_button-exit header__nav_button-black header__nav_black">Грета
+        <li class="header__nav_list"><a href="./index.html" class="header__nav header__nav_black">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav header__nav_button-exit header__nav_button-black header__nav_black">Грета
           <image class="header__nav_img" src="<%=require('../images/exit.png').default%>" alt="exit">
+        </button></li>
+      </ul>
+  </header> -->
+  <header class="header">
+     <img class="header__open" src="<%=require('../images/menu.png').default%>" alt="menu">
+     <img class="header__close invisible" src="<%=require('../images/back.png').default%>" alt="close menu" > 
+     <p class="header__logo header__logo_black">NewsExplorer</p>
+      <ul class="header__nav">
+        <li class="header__nav_list"><a href="./index.html" class="header__nav_link header__nav_black">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav_link header__nav_button header__nav_button-black header__nav_black">Авторизоваться
+          <image class="header__nav_img invisible" src="<%=require('../images/exit-white.png').default%>" alt="exit">
         </button></li>
       </ul>
   </header>
