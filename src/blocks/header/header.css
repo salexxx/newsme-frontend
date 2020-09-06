@@ -22,5 +22,11 @@
         padding: 0px 6% 0px 6%;
     }
 }
+@media all and (max-width: 633px) {
+    .header {
+        /* border-bottom: 1px solid #a5a5a5; */
+       align-content: left;
+    }
+}
 
 

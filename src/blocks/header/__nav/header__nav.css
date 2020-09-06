@@ -78,12 +78,21 @@
        position: absolute;
        top: 0px;
        left: 0;
-       flex-direction: column;
+/*        display: column;
+ */       flex-direction: column;
        height: 286px;
        max-width: 663px;
        width: 100%;
        background-color: #1a1b22;
        border-bottom-right-radius: 16px;
        border-bottom-left-radius: 16px;
+       align-items: flex-start;
+       padding-top: 80px;
+    }
+    .header__nav_button {
+       margin: 0 auto;
+    }
+    .header__nav_list {
+        width: 100%;
     }
 }
