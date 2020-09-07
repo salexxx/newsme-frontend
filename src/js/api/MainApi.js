@@ -6,8 +6,7 @@ export default class MainApi {
 
   _getResponseData(res) {
     if (!res.ok) {
-      // eslint-disable-next-line prefer-promise-reject-errors
-      return Promise.reject(`Ошибка: ${res.status}`);
+      return Promise.resolve(res.json());
     }
     return res.json();
   }
@@ -83,10 +82,12 @@ export default class MainApi {
   getUser() {
     return fetch(`${this.options.baseUrl}/users/me`, {
       method: 'GET',
+      credentials: 'include',
       headers: {
         authorization: this.options.headers.authorization,
       },
     })
       .then((res) => this._getResponseData(res));
+    // .catch((err) =>  {return (err);});
   }
 }

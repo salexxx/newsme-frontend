@@ -5,17 +5,10 @@ import ResultList from './components/ResultList';
 import Popup from './components/Popup';
 import Form from './components/Form';
 import MainApi from './api/MainApi';
+import isLoggetIn from './utils/isLoggedIn';
 
-// const searchButton = document.querySelector('.search__button');
 let cardsArray = [];
 const cardlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
-
-/* const mobilemenu = document.querySelector('.popupmenu__icon');
-const popupMenu = new Popup('mobilemenu');
-mobilemenu.addEventListener('click', () => {
-  popupMenu.toggle();
-  popupMenu.setContent();
-}); */
 
 const authoriz = document.querySelector('.header__nav_button');
 const popupAuthoriz = new Popup('authoriz');
@@ -29,7 +22,14 @@ const formAuthoriz = new Form(document.querySelector('#authorization'));
 
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
+  headers: {
+    authorization: `Bearer ${localStorage.getItem('token')}`,
+    'Content-Type': 'application/json',
+  },
+  credentials: 'include',
 });
+
+console.log(isLoggetIn(api));
 
 // навигация между popups
 toggletoAuthen.onclick = () => {
@@ -85,8 +85,10 @@ document.forms.searchForm.onsubmit = (e) => {
   const news = new NewsApi(e.target.elements.input.value);
   news.getNews()
     .then((res) => {
+      const keyword = e.target.elements.input.value;
       cardsArray = res.articles.map((elem) => {
         const newscard = new NewsCard(
+          keyword,
           elem.title,
           elem.description,
           elem.publishedAt,

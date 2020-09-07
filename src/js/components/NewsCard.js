@@ -1,5 +1,5 @@
 export default class NewsCard {
-  constructor(title, description, publishedAt, url, urlToImage, source) {
+  constructor(keyword, title, description, publishedAt, url, urlToImage, source) {
     this.title = title;
     this.description = description;
     this.publishedAt = publishedAt;
