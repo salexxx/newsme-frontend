@@ -6,6 +6,7 @@ import Popup from './components/Popup';
 import Form from './components/Form';
 import MainApi from './api/MainApi';
 import isLoggetIn from './utils/isLoggedIn';
+import Header from './components/Header';
 
 let cardsArray = [];
 const cardlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
@@ -19,7 +20,7 @@ const toggletoAuthoriz = document.querySelector('.toggle-to-authoriz');
 const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
-
+const header = new Header();
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
   headers: {
@@ -28,8 +29,13 @@ const api = new MainApi({
   },
   credentials: 'include',
 });
-
-console.log(isLoggetIn(api));
+console.log(isLoggetIn());
+if (isLoggetIn()) {
+  const name = localStorage.getItem('name');
+  header.render({ isLogged: true, name });
+} else {
+  header.render({ isLogged: false, undefined });
+}
 
 // навигация между popups
 toggletoAuthen.onclick = () => {
@@ -70,9 +76,11 @@ document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
   api.signin(e.target.elements.email.value, e.target.elements.password.value)
     .then((res) => {
-      const { token } = res;
-      console.log('got token', token);
+      const { token, name } = res;
       localStorage.setItem('token', token);
+      localStorage.setItem('name', name);
+      console.log(res);
+      header.render({ isLogged: true, name });
       popupAuthoriz.close();
     })
     .catch((err) => console.log({ message: err }));

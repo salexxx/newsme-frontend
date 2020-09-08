@@ -88,6 +88,5 @@ export default class MainApi {
       },
     })
       .then((res) => this._getResponseData(res));
-    // .catch((err) =>  {return (err);});
   }
 }
