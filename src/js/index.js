@@ -5,7 +5,7 @@ import ResultList from './components/ResultList';
 import Popup from './components/Popup';
 import Form from './components/Form';
 import MainApi from './api/MainApi';
-import isLoggetIn from './utils/isLoggedIn';
+import isLoggedIn from './utils/isLoggedIn';
 import Header from './components/Header';
 
 let cardsArray = [];
@@ -20,7 +20,21 @@ const toggletoAuthoriz = document.querySelector('.toggle-to-authoriz');
 const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
-const header = new Header();
+const header = new Header('white', document.querySelector('.header__nav'));
+
+if (isLoggedIn()) {
+  const name = localStorage.getItem('name');
+  header.render({ isLogged: true, name });
+} else {
+  header.render({ isLogged: false, undefined });
+}
+
+const openmenu = document.querySelector('.header__open');
+const closemenu = document.querySelector('.header__close');
+
+openmenu.addEventListener('click', () => header.open());
+closemenu.addEventListener('click', () => header.close());
+
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
   headers: {
@@ -29,13 +43,6 @@ const api = new MainApi({
   },
   credentials: 'include',
 });
-console.log(isLoggetIn());
-if (isLoggetIn()) {
-  const name = localStorage.getItem('name');
-  header.render({ isLogged: true, name });
-} else {
-  header.render({ isLogged: false, undefined });
-}
 
 // навигация между popups
 toggletoAuthen.onclick = () => {
@@ -53,10 +60,11 @@ successtoAuthorize.onclick = () => {
 };
 //
 // слушатель кнопки авторизации
-authoriz.addEventListener('click', () => {
-  popupAuthoriz.open();
-  formAuthoriz.setEventListener();
-});
+authoriz.onclick = () => {
+  if (!isLoggedIn()) {
+    popupAuthoriz.open(); formAuthoriz.setEventListener(); 
+  } else { header.logout(); }
+};
 
 // отправка формы регистрации
 document.forms.registration.onsubmit = (e) => {
@@ -76,10 +84,10 @@ document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
   api.signin(e.target.elements.email.value, e.target.elements.password.value)
     .then((res) => {
-      const { token, name } = res;
+      const { token, name, id } = res;
       localStorage.setItem('token', token);
       localStorage.setItem('name', name);
-      console.log(res);
+      localStorage.setItem('id', id);
       header.render({ isLogged: true, name });
       popupAuthoriz.close();
     })

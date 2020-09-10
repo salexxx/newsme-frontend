@@ -4,8 +4,14 @@
     top: 26px;
     right: 36px;
     cursor: pointer;
-    z-index: 100;
+    z-index: 1;
   }
 .header__close:hover {
     opacity: .7;
+}
+
+@media all and (min-width: 664px) {
+ .header__close {
+   visibility: hidden;
+ }
 }

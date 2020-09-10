@@ -5,13 +5,18 @@
     top: 26px;
     right: 36px;
     cursor: pointer;
-   z-index: 100;
-}
+/*    z-index: 10;
+ */}
 @media all and (min-width: 664px) {
     .header__open {
-     display: none; 
+    visibility: hidden;  
     }
 }
 .header__open:hover {
     opacity: .7;
+}
+@media all and (max-width: 663px) {
+    .header__open {
+        visibility: visible;
+    }
 }
