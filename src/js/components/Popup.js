@@ -9,7 +9,12 @@ export default class Popup {
   }
 
   close() {
-    this.form.reset();
+    if (this.form) {
+      this.form.reset();
+      this._clearContent();
+      this.popup.classList.remove('popup_is-opened');
+      return;
+    }
     this._clearContent();
     this.popup.classList.remove('popup_is-opened');
   }
@@ -24,7 +29,9 @@ export default class Popup {
   }
 
   _clearContent() {
-    document.querySelector('.popup__error-message-span').textContent = '';
+    if (this.form) {
+      this.err.textContent = '';
+    }
     this.content.classList.remove('popup__content_is-opened');
   }
 
