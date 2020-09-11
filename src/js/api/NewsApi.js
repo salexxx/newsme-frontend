@@ -4,7 +4,7 @@ export default class NewsApi {
   constructor(query) {
     const url = 'http://newsapi.org/v2/everything?'
            + `q=${query}&`
-           + `from=${getDate}&`
+           + `from=${getDate.getDate()}&`
            + 'sortBy=popularity&'
            + 'apiKey=1e2fe3565359499396b3dec8c265c2b3';
     this.req = new Request(url);
