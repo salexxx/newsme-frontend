@@ -62,7 +62,7 @@ successtoAuthorize.onclick = () => {
 // слушатель кнопки авторизации
 authoriz.onclick = () => {
   if (!isLoggedIn()) {
-    popupAuthoriz.open(); formAuthoriz.setEventListener(); 
+    popupAuthoriz.open(); formAuthoriz.setEventListener();
   } else { header.logout(); }
 };
 
@@ -73,17 +73,25 @@ document.forms.registration.onsubmit = (e) => {
     e.target.elements.password.value,
     e.target.elements.name.value)
     .then((res) => {
-      console.log(res);
+      console.log(res.message);
+      if (res.message) {
+        popupAuthen.showMessage(res.message);
+        return;
+      }
       popupAuthen.close();
       popupSuccess.open();
     })
-    .catch((err) => console.log(err.message));
+    .catch((err) => console.log(err));
 };
 // отправка формы авторизации
 document.forms.authorization.onsubmit = (e) => {
   e.preventDefault();
   api.signin(e.target.elements.email.value, e.target.elements.password.value)
     .then((res) => {
+      if (res.message) {
+        popupAuthoriz.showMessage(res.message);
+        return;
+      }
       const { token, name, id } = res;
       localStorage.setItem('token', token);
       localStorage.setItem('name', name);
@@ -91,7 +99,7 @@ document.forms.authorization.onsubmit = (e) => {
       header.render({ isLogged: true, name });
       popupAuthoriz.close();
     })
-    .catch((err) => console.log({ message: err }));
+    .catch((err) => console.log(err));
 };
 
 // отправка формы поиска новостей

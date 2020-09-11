@@ -15,6 +15,7 @@
   }
 }
 .popup__content-center {
+ position: relative; 
 text-align: center;
 }
 .popup__content_is-opened {

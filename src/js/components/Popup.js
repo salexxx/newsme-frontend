@@ -5,6 +5,7 @@ export default class Popup {
     this.popup = document.querySelector('.popup');
     this.closebtn = this.content.querySelector('.popup__close');
     this.closebtn.addEventListener('click', this.close.bind(this));
+    this.err = this.content.querySelector('.popup__error-message-span');
   }
 
   close() {
@@ -23,6 +24,11 @@ export default class Popup {
   }
 
   _clearContent() {
+    document.querySelector('.popup__error-message-span').textContent = '';
     this.content.classList.remove('popup__content_is-opened');
+  }
+
+  showMessage(message) {
+    this.err.textContent = message;
   }
 }
