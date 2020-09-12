@@ -18,6 +18,7 @@ export default class NewsCard {
     article.content.querySelector('.article__image').src = this.urlToImage;
     article.content.querySelector('.article__date').textContent = dateFormater.dateFormater(this.publishedAt);
     article.content.querySelector('.article__title').textContent = this.title;
+    article.content.querySelector('.article__title').setAttribute('href', this.url);
     article.content.querySelector('.article__text').textContent = this.description;
     article.content.querySelector('.article__source').textContent = this.source;
 
