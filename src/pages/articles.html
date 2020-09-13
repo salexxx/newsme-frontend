@@ -28,9 +28,10 @@
      <p class="header__logo header__logo_black">NewsExplorer</p>
       <ul class="header__nav">
         <li class="header__nav_list"><a href="./index.html" class="header__nav_link header__nav_black">Главная</a></li>
-        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
+<!--         <li class="header__nav_list"><a href="./articles.html" class="header__nav_link header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
+ -->        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link-black header__nav_linktosaved header__nav_active-black">Сохранённые статьи</a></li>
         <li class="header__nav_list"><button class="header__nav_link header__nav_button header__nav_button-black header__nav_black">Авторизоваться
-          <image class="header__nav_img invisible" src="<%=require('../images/exit-white.png').default%>" alt="exit">
+          <image class="header__nav_img invisible" src="<%=require('../images/exit.png').default%>" alt="exit">
         </button></li>
       </ul>
   </header>
@@ -40,75 +41,34 @@
   <p class="result__title result__subtitle">По ключевым словам: <span class="result__subtitle_bold">Природа, Тайга</span> и <span class="result-section_subtitle-bold">2 другим</span></p>
  
   <section class="result"> 
-      <div class="result__articles">
-  
-      <figure class="article">
-          <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article__image">
-          <div class="article__content">
-              <p class="article__date">2 августа, 2019</p>
-              <h4 class="article__title">Национальное достояние – парки</h4>
-              <p class="article__text">В 2016 году Америка отмечала важный юбилей:
-              сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-              где и сегодня каждый может приобщиться к природе.</p>
-              <p class="article__source">ДЗЕН</p>
-          </div>
-          <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
-          <button class="article__bookmark article__bookmark_trash"></button>
-      </figure>
-  
-      <figure class="article">
-          <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article__image">
-          <div class="article__content">
-              <p class="article__date">2 августа, 2019</p>
-              <h4 class="article__title">Лесные огоньки: история одной фотографии</h4>
-              <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-                  из местных чудес природы.</p>
-              <p class="article__source">Афиша</p>
-          </div>
-          <button class="article__tooltip ">Убрать из сохраненных</button>
-          <button class="article__bookmark article__bookmark_trash"></button>
-      </figure>
-  
-      <figure class="article">
-         <img src="<%=require('../images/image_05.png').default%>" alt="article image" class="article__image">
-         <div class="article__content">
-            <p class="article__date">2 августа, 2019</p>
-            <h4 class="article__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h4>
-            <p class="article__text">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-            <p class="article__source">Медиазона</p>
-        </div>
-        <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
-        <button class="article__bookmark article__bookmark_trash"></button>
-      </figure>
-   
 
-    <figure class="article">
-      <img src="<%=require('../images/image_06.png').default%>" alt="article image" class="article__image">
-      <div class="article__content">
-          <p class="article__date">2 августа, 2019</p>
-          <h4 class="article__title">Национальное достояние – парки</h4>
-          <p class="article__text">В 2016 году Америка отмечала важный юбилей:
-          сто лет назад здесь начала складываться система национальных парков – охраняемых территорий,
-          где и сегодня каждый может приобщиться к природе.</p>
-          <p class="article__source">ДЗЕН</p>
-      </div>
-      <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
-      <button class="article__bookmark article__bookmark_trash"></button>
-  </figure>
+    <div class="result__preloader invisible">
+      <div class="circle-preloader"></div>
+      <span class="result__span">Идет поиск новостей...</span>
+     </div>
 
-  <figure class="article">
-    <img src="<%=require('../images/image_01.png').default%>" alt="article image" class="article__image">
-    <div class="article__content">
-        <p class="article__date">2 августа, 2019</p>
-        <h4 class="article__title">Лесные огоньки: история одной фотографии</h4>
-        <p class="article__text">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-            из местных чудес природы.</p>
-        <p class="article__source">Афиша</p>
+     <div class="result__zero invisible">
+      <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
+      <span class="result__zero_title">Ничего не найдено</span>
+      <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
     </div>
-    <button class="article__tooltip article__tooltip_disabled">Убрать из сохраненных</button>
-    <button class="article__bookmark article__bookmark_trash"></button>
-  </figure>
-      </div>
+
+    <template class="article">
+      <figure class="article"> 
+         <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
+         <div class="article__content">
+             <p class="article__date"></p>
+             <a class="article__title" href="" target="_blank"></a>
+             <p class="article__text"></p>
+             <p class="article__source"></p>
+         </div>
+         <button class="article__bookmark article__bookmark_trash"></button>
+         <button class="article__tooltip">Убрать из сохраненных</button>
+      </figure>
+ </template>
+      <div class="result__articles"></div>
+      <button class="result__button result__button_invisible">Показать ещё</button> 
+      
 </section>
 
     <div class="footer_menu">
@@ -126,5 +86,6 @@
            
       </nav>
       </div>
+      <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> 
  </body>
 </html>

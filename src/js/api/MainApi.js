@@ -72,8 +72,8 @@ export default class MainApi {
       .then((res) => this._getResponseData(res));
   }
 
-  deleteArticle(articleId) {
-    return fetch(`${this.options.baseUrl}/articles/${articleId}`, {
+  deleteArticle(url) {
+    return fetch(`${this.options.baseUrl}/articles/${url}`, {
       method: 'DELETE',
       headers: {
         authorization: this.options.headers.authorization,

@@ -20,6 +20,15 @@
     text-decoration: none;
     text-align: center;
 }
+.header__nav_link-black {
+    color: #1a1b22;
+    font-family: 'RobotoMedium', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 32px;
+    text-decoration: none;
+    text-align: center;
+}
 
 .header__nav_link:hover {
     opacity: .7;

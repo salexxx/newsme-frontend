@@ -30,3 +30,6 @@
 .article__bookmark_trash {
     background-image: url('../../../images/trash.png');
 }
+.article__bookmark_trash:hover {
+    background-image: url('../../../images/trash-hover.png');
+}
