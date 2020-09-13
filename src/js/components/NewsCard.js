@@ -23,8 +23,6 @@ export default class NewsCard {
     article.content.querySelector('.article__text').textContent = this.description;
     article.content.querySelector('.article__source').textContent = this.source;
     const clone = document.importNode(article.content, true);
-    //console.log(clone.querySelector('.article__bookmark'));
-    // debugger;
     if (!this.isLogged) {
       clone.querySelector('.article__bookmark').classList.remove('article__bookmark_normal');
       clone.querySelector('.article__bookmark').classList.add('article__bookmark_notlogged');
@@ -33,8 +31,15 @@ export default class NewsCard {
   }
 
   handler() {
-    console.log(event.target);
     const api = this._createApi;
+    if (event.target.classList.contains('article__bookmark_marked')) {
+      api.deleteArticle(
+        this._id,
+      )
+        .then(event.target.classList.remove('article__bookmark_marked'))
+        .catch((err) => console.log(err));
+      return;
+    }
     api.addArticle(
       this.keyword,
       this.title,
@@ -46,7 +51,11 @@ export default class NewsCard {
       localStorage.getItem('id'),
 
     )
+      .then((res) => {
+        this._id = res.data._id;
+      })
       .then(event.target.classList.add('article__bookmark_marked'))
+      .catch((err) => console.log(err));
   }
 /*
   setEventListener() {

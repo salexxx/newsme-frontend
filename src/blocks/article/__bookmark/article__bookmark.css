@@ -19,11 +19,11 @@
 }
 
 .article__bookmark_normal {
-    background-image: url('../../../images/Rectangle-normal.png');
-}
-.article__bookmark_normal:hover {
     background-image: url('../../../images/Rectangle-hover.svg');
 }
+/* .article__bookmark_normal:hover {
+    background-image: url('../../../images/Rectangle-hover.svg');
+} */
 .article__bookmark_marked {
     background-image: url('../../../images/Rectangle-marked.png');
 }
