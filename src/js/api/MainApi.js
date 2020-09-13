@@ -50,7 +50,7 @@ export default class MainApi {
       .then((res) => this._getResponseData(res));
   }
 
-  addArticle(title, description, souce, publishedAt, urlToImage) {
+  addArticle(keyword, title, text, date, source, link, image, owner) {
     return fetch(`${this.options.baseUrl}/articles`, {
       method: 'POST',
       headers: {
@@ -58,11 +58,14 @@ export default class MainApi {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
+        keyword,
         title,
-        description,
-        souce,
-        publishedAt,
-        urlToImage,
+        text,
+        date,
+        source,
+        link,
+        image,
+        owner,
       }),
 
     })

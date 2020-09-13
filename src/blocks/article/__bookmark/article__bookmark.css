@@ -8,6 +8,8 @@
     right: 24px;
     background-repeat: no-repeat;
     background-position: center; 
+    outline: none;
+    border: none;
 } 
 
 .article__bookmark_normal {

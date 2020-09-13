@@ -9,7 +9,7 @@ import isLoggedIn from './utils/isLoggedIn';
 import Header from './components/Header';
 
 let cardsArray = [];
-const cardlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
+const resultlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
 
 const authoriz = document.querySelector('.header__nav_button');
 const popupAuthoriz = new Popup('authoriz');
@@ -21,6 +21,7 @@ const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
 const header = new Header('white', document.querySelector('.header__nav'));
+const isLogget = isLoggedIn();
 
 if (isLoggedIn()) {
   const name = localStorage.getItem('name');
@@ -104,7 +105,7 @@ document.forms.authorization.onsubmit = (e) => {
 
 // отправка формы поиска новостей
 document.forms.searchForm.onsubmit = (e) => {
-  cardlist.renderLoader();
+  resultlist.renderLoader();
   e.preventDefault();
   const news = new NewsApi(e.target.elements.input.value);
   news.getNews()
@@ -119,11 +120,13 @@ document.forms.searchForm.onsubmit = (e) => {
           elem.url,
           elem.urlToImage,
           elem.source.name,
+          isLogget,
+          api,
         );
         return newscard.create();
       });
-      cardlist.renderLoader();
-      cardlist.renderResults(cardsArray);
+      resultlist.renderLoader();
+      resultlist.renderResults(cardsArray);
     })
     .catch((err) => (new Error({ message: err })));
 };
