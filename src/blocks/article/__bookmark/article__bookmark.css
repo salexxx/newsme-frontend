@@ -11,6 +11,12 @@
     outline: none;
     border: none;
 } 
+.article__bookmark_notlogged {
+    background-image: url('../../../images/Rectangle-normal.png');
+}
+.article__bookmark_notlogged:hover + .article__tooltip {
+    display: inline;
+}
 
 .article__bookmark_normal {
     background-image: url('../../../images/Rectangle-normal.png');
