@@ -6,7 +6,7 @@ ____
 
 ### дипломная работа Yandex.Praktikum
 
-[посмотреть по ссылке](https://salexxx.github.io/newsme-frontend/)
+[посмотреть по ссылке](http://newsme.ml)
 ____
 
 ### О проекте
