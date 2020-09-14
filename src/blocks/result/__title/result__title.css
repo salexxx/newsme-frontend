@@ -28,6 +28,10 @@ padding-top: 28px;
  
     font-weight: bold;
 }
+.result__subtitle_bold-other {
+    font-weight: bold;
+}
+
 @media all and (max-width: 768px) {
     .result__title {
      max-width: 336px;   

@@ -23,7 +23,7 @@
       </ul>
   </header> -->
   <header class="header">
-     <img class="header__open" src="<%=require('../images/menu.png').default%>" alt="menu">
+     <img class="header__open" src="<%=require('../images/menu_black.png').default%>" alt="menu">
      <img class="header__close invisible" src="<%=require('../images/back.png').default%>" alt="close menu" > 
      <p class="header__logo header__logo_black">NewsExplorer</p>
       <ul class="header__nav">
@@ -38,7 +38,7 @@
 
   <h5 class="result__title result__uptitle">Сохраненные статьи</h5>
   <h2 class="result__title result__title_saved">Грета, у вас 5 сохраненных статей</h2>
-  <p class="result__title result__subtitle">По ключевым словам: <span class="result__subtitle_bold">Природа, Тайга</span> и <span class="result-section_subtitle-bold">2 другим</span></p>
+  <p class="result__title result__subtitle">По ключевым словам: <span class="result__subtitle_bold"></span><span class="result__subtitle_bold-other"></span></p>
  
   <section class="result"> 
 
@@ -64,6 +64,7 @@
          </div>
          <button class="article__bookmark article__bookmark_trash"></button>
          <button class="article__tooltip">Убрать из сохраненных</button>
+         <button class="article__tooltip_keyword">Убрать из сохраненных</button>
       </figure>
  </template>
       <div class="result__articles"></div>

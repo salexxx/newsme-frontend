@@ -17,6 +17,13 @@ if (isLoggedIn()) {
 } else {
   document.location.href = '/index.html';
 }
+
+const openmenu = document.querySelector('.header__open');
+const closemenu = document.querySelector('.header__close');
+
+openmenu.addEventListener('click', () => header.open());
+closemenu.addEventListener('click', () => header.close());
+
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
   headers: {
@@ -26,12 +33,24 @@ const api = new MainApi({
   credentials: 'include',
 });
 
+function renderSubtitle(arr) {
+  if (arr.length === 3) {
+    document.querySelector('.result__subtitle_bold').textContent = `${arr[0]}, ${arr[1]}, ${arr[2]}`;
+  } else if (arr.length === 2) {
+    document.querySelector('.result__subtitle_bold').textContent = `${arr[0]}, ${arr[1]}`;
+  } else if (arr.length === 1) {
+    document.querySelector('.result__subtitle_bold').textContent = `${arr[0]}`;
+  } else {
+    document.querySelector('.result__subtitle_bold').textContent = `${arr[0]}, ${arr[1]}`;
+    document.querySelector('.result__subtitle_bold-other').textContent = ` и ${arr.length - 2} другим`;
+  }
+}
+
 api.getArticles()
   .then((res) => {
-    console.log(res);
     const sorted = keywordCounter(res);
-    document.querySelector('.result__subtitle_bold').textContent = `${sorted[0]}, ${sorted[1]}`;
-    document.querySelector('.result-section_subtitle-bold').textContent = `${sorted.length - 2} другим`;
+    console.log(sorted);
+    if (sorted.length !== 0) renderSubtitle(sorted);
     cardsArray = res.data.map((elem) => {
       const newscard = new NewsCard(
         elem.keyword,
@@ -50,3 +69,7 @@ api.getArticles()
     title.textContent = `${localStorage.getItem('name')}, у вас ${cardsArray.length} сохраненных статей`;
     resultlist.renderResults(cardsArray);
   });
+
+/* document.addEventListener('click', (e) => {
+  console.log(e.target, cardsArray);
+}) */
