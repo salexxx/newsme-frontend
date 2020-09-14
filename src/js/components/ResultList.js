@@ -33,16 +33,16 @@ export default class ResultList {
     arr.forEach((elem) => {
       this.addCard(elem);
     });
-    this._scroll();
+    //  this._scroll();
     if (this.cardsArray.length === 0) {
       this.button.classList.add('result__button_invisible');
     }
   }
 
-  _scroll() {
+/*   _scroll() {
     this.button = document.querySelector('.result__button');
     this.button.scrollIntoView({ behavior: 'smooth', block: 'end' });
-  }
+  } */
 
   _clearResults() {
     while (this.container.lastChild) {
