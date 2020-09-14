@@ -37,6 +37,10 @@
 .header__nav_black {
     color: #1a1b22;
 }
+/* .header__nav_white {
+    color: #fff;
+}
+ */
 
 .header__nav_disable {
     display: none; 
@@ -110,3 +114,9 @@
        border-bottom: 0px;
     }
 }
+
+ @media all and (min-width: 664px) {
+    .header__nav {
+        visibility: visible;
+    }
+} 

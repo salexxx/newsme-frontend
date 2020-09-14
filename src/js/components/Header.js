@@ -11,12 +11,12 @@ export default class Header extends BaseComponent {
     const { isLogged, name } = props;
     if (isLogged) {
       this.menu.querySelector('.header__nav_button').firstChild.textContent = name;
-      this.menu.querySelector('.header__nav_linktosaved').classList.remove('invisible');
+      this.menu.querySelector('.header__nav_linkto').classList.remove('invisible');
       this.menu.querySelector('.header__nav_img').classList.remove('invisible');
     }
     if (!isLogged) {
       this.menu.querySelector('.header__nav_button').firstChild.textContent = 'Авторизоваться';
-      this.menu.querySelector('.header__nav_linktosaved').classList.add('invisible');
+      this.menu.querySelector('.header__nav_linkto').classList.add('invisible');
       this.menu.querySelector('.header__nav_img').classList.add('invisible');
     }
   }
@@ -27,13 +27,12 @@ export default class Header extends BaseComponent {
 
   close() {
     this.menu.style.visibility = 'hidden';
-    document.querySelector('.header__open').style.visibility = 'vasible';
   }
 
   logout() {
     localStorage.removeItem('token');
     this.menu.querySelector('.header__nav_button').firstChild.textContent = 'Авторизоваться';
-    this.menu.querySelector('.header__nav_linktosaved').classList.add('invisible');
+    this.menu.querySelector('.header__nav_linkto').classList.add('invisible');
     this.menu.querySelector('.header__nav_img').classList.add('invisible');
   }
 }

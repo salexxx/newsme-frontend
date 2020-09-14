@@ -11,18 +11,41 @@ const resultlist = new ResultList(document.querySelector('.result__articles'), c
 const title = document.querySelector('.result__title_saved');
 const isLogged = isLoggedIn();
 const header = new Header('white', document.querySelector('.header__nav'));
+const openmenu = document.querySelector('.header__open');
+const closemenu = document.querySelector('.header__close');
+const authoriz = document.querySelector('.header__nav_button');
+
+authoriz.onclick = () => {
+  header.logout();
+  document.location.href = '/index.html';
+};
+
+openmenu.addEventListener('click', () => {
+  header.open();
+  // вся шляпа что не стал делать отдельное меню для мобильных устройств
+  document.querySelector('.header__logo').classList.remove('header__logo_black');
+  document.querySelector('.header__nav_link').classList.remove('header__nav_black');
+  document.querySelector('.header__nav_linkto').classList.remove('header__nav_black');
+  document.querySelector('.header__nav_linkto').classList.remove('header__nav_active-black');
+  document.querySelector('.header__nav_button').classList.remove('header__nav_black');
+  document.querySelector('.header__nav_img').setAttribute('src', '../images/exit-white.png');
+});
+closemenu.addEventListener('click', () => {
+  header.close();
+  document.querySelector('.header__logo').classList.add('header__logo_black');
+  document.querySelector('.header__nav_link').classList.add('header__nav_black');
+  document.querySelector('.header__nav_linkto').classList.add('header__nav_black');
+  document.querySelector('.header__nav_linkto').classList.add('header__nav_active-black');
+  document.querySelector('.header__nav_button').classList.add('header__nav_black');
+  document.querySelector('.header__nav_img').setAttribute('src', '../images/exit.png');
+});
+
 if (isLoggedIn()) {
   const name = localStorage.getItem('name');
   header.render({ isLogged: true, name });
 } else {
   document.location.href = '/index.html';
 }
-
-const openmenu = document.querySelector('.header__open');
-const closemenu = document.querySelector('.header__close');
-
-openmenu.addEventListener('click', () => header.open());
-closemenu.addEventListener('click', () => header.close());
 
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
@@ -69,7 +92,3 @@ api.getArticles()
     title.textContent = `${localStorage.getItem('name')}, у вас ${cardsArray.length} сохраненных статей`;
     resultlist.renderResults(cardsArray);
   });
-
-/* document.addEventListener('click', (e) => {
-  console.log(e.target, cardsArray);
-}) */
