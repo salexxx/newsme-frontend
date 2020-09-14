@@ -9,13 +9,13 @@ import keywordCounter from '../utils/keywordCounter';
 let cardsArray = [];
 const resultlist = new ResultList(document.querySelector('.result__articles'), cardsArray);
 const title = document.querySelector('.result__title_saved');
-
+const isLogged = isLoggedIn();
 const header = new Header('white', document.querySelector('.header__nav'));
 if (isLoggedIn()) {
   const name = localStorage.getItem('name');
   header.render({ isLogged: true, name });
 } else {
-  header.render({ isLogged: false, undefined });
+  document.location.href = '/index.html';
 }
 const api = new MainApi({
   baseUrl: 'http://localhost:3000',
@@ -28,10 +28,10 @@ const api = new MainApi({
 
 api.getArticles()
   .then((res) => {
+    console.log(res);
     const sorted = keywordCounter(res);
     document.querySelector('.result__subtitle_bold').textContent = `${sorted[0]}, ${sorted[1]}`;
     document.querySelector('.result-section_subtitle-bold').textContent = `${sorted.length - 2} другим`;
-   // console.log(keywordCounter(res));
     cardsArray = res.data.map((elem) => {
       const newscard = new NewsCard(
         elem.keyword,
@@ -41,6 +41,9 @@ api.getArticles()
         elem.link,
         elem.image,
         elem.source,
+        isLogged,
+        api,
+        elem._id,
       );
       return newscard.create();
     });

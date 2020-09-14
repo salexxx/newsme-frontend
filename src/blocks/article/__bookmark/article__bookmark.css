@@ -33,3 +33,6 @@
 .article__bookmark_trash:hover {
     background-image: url('../../../images/trash-hover.png');
 }
+.article__bookmark_trash:hover + .article__tooltip {
+    display: inline;
+}

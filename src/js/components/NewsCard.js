@@ -1,8 +1,9 @@
+/* eslint-disable no-restricted-globals */
 import dateFormater from '../utils/getDate';
 
 export default class NewsCard {
   constructor(keyword, title, description, publishedAt,
-    url, urlToImage, source, isLogged, createApi) {
+    url, urlToImage, source, isLogged, createApi, id) {
     this.keyword = keyword;
     this.title = title;
     this.description = description;
@@ -12,6 +13,7 @@ export default class NewsCard {
     this.source = source;
     this.isLogged = isLogged;
     this._createApi = createApi;
+    this._id = id;
   }
 
   create() {
@@ -26,13 +28,16 @@ export default class NewsCard {
     if (!this.isLogged) {
       clone.querySelector('.article__bookmark').classList.remove('article__bookmark_normal');
       clone.querySelector('.article__bookmark').classList.add('article__bookmark_notlogged');
-    } else { clone.querySelector('.article__bookmark').addEventListener('click', this.handler.bind(this)); }
+      return clone;
+    }
+    clone.querySelector('.article__bookmark').addEventListener('click', this.handler.bind(this));
     return clone;
   }
 
   handler() {
     const api = this._createApi;
-    if (event.target.classList.contains('article__bookmark_marked')) {
+    if (event.target.classList.contains('article__bookmark_marked') || event.target.classList.contains('article__bookmark_trash')) {
+      console.log(this);
       api.deleteArticle(
         this._id,
       )
@@ -40,6 +45,7 @@ export default class NewsCard {
         .catch((err) => console.log(err));
       return;
     }
+    console.log(this);
     api.addArticle(
       this.keyword,
       this.title,

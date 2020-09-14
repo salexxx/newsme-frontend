@@ -21,7 +21,7 @@ const successtoAuthorize = document.querySelector('.success-to-authoriz');
 const formAuthen = new Form(document.querySelector('#registration'));
 const formAuthoriz = new Form(document.querySelector('#authorization'));
 const header = new Header('white', document.querySelector('.header__nav'));
-const isLogget = isLoggedIn();
+const isLogged = isLoggedIn();
 
 if (isLoggedIn()) {
   const name = localStorage.getItem('name');
@@ -120,7 +120,7 @@ document.forms.searchForm.onsubmit = (e) => {
           elem.url,
           elem.urlToImage,
           elem.source.name,
-          isLogget,
+          isLogged,
           api,
         );
         return newscard.create();
