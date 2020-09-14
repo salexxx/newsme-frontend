@@ -32,7 +32,6 @@ if (isLoggedIn()) {
 
 const openmenu = document.querySelector('.header__open');
 const closemenu = document.querySelector('.header__close');
-console.log(closemenu);
 openmenu.addEventListener('click', () => header.open());
 closemenu.addEventListener('click', () => header.close());
 
