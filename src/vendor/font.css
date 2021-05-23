@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'RobotoSlabBold';
+    src: url('/src/vendor/fonts/RobotoSlabBold.woff2') format('woff2');
+
+}
+@font-face {
+    font-family: 'RobotoMedium';
+    src: url('/src/vendor/fonts/Roboto-Medium.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'RobotoSlabRegular';
+    src: url('/src/vendor/fonts/RobotoSlab-Regular.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'RobotoRegular';
+    src: url('/src/vendor/fonts/Roboto-Regular.ttf') format('truetype');
+
+}
+@font-face {
+    font-family: 'SourceSunsPro';
+    src: url('/src/vendor/fonts/SourceSansPro-Regular.ttf') format('truetype');
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Дипломная работа Yandex Praktikum. Сервис поиска и сохранения новостных статей.">
+  <meta name="author" content="Smolyaninov A.">
+  <link rel="icon" href="<%=require('../images/favicon.png').default%>" sizes="16x16" type="image/png" >
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <title>News Explorer</title>
+</head>
+<body>
+<!--   <header class="header">
+    <img class="header__icon" src="<%=require('../images/menu_black.png').default%>" alt="menu">
+      <p class="header__logo header__logo_black">NewsExplorer</p>
+      <ul class="header__nav">
+        <li class="header__nav_list"><a href="./index.html" class="header__nav header__nav_black">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav header__nav_black header__nav_active-black">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav header__nav_button-exit header__nav_button-black header__nav_black">Грета
+          <image class="header__nav_img" src="<%=require('../images/exit.png').default%>" alt="exit">
+        </button></li>
+      </ul>
+  </header> -->
+  <header class="header">
+     <img class="header__open" src="<%=require('../images/menu_black.png').default%>" alt="menu">
+     <p class="header__logo header__logo_black">NewsExplorer</p>
+      <ul class="header__nav">
+        <img class="header__close" src="<%=require('../images/back.png').default%>" alt="close menu" > 
+        <li class="header__nav_list"><a href="./index.html" class="header__nav_link header__nav_black">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link header__nav_black header__nav_linkto header__nav_active-black">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav_link header__nav_button header__nav_button-black header__nav_black">Авторизоваться
+          <image class="header__nav_img invisible" src="<%=require('../images/exit.png').default%>" alt="exit">
+        </button></li>
+      </ul>
+  </header>
+
+  <h5 class="result__title result__uptitle">Сохраненные статьи</h5>
+  <h2 class="result__title result__title_saved">Грета, у вас 5 сохраненных статей</h2>
+  <p class="result__title result__subtitle">По ключевым словам: <span class="result__subtitle_bold"></span><span class="result__subtitle_bold-other"></span></p>
+ 
+  <section class="result"> 
+
+    <div class="result__preloader invisible">
+      <div class="circle-preloader"></div>
+      <span class="result__span">Идет поиск новостей...</span>
+     </div>
+
+     <div class="result__zero invisible">
+      <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
+      <span class="result__zero_title">Ничего не найдено</span>
+      <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
+    </div>
+
+    <template class="article">
+      <figure class="article"> 
+         <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
+         <div class="article__content">
+             <p class="article__date"></p>
+             <a class="article__title" href="" target="_blank"></a>
+             <p class="article__text"></p>
+             <p class="article__source"></p>
+         </div>
+         <button class="article__bookmark article__bookmark_trash"></button>
+         <button class="article__tooltip">Убрать из сохраненных</button>
+         <button class="article__tooltip_keyword">Убрать из сохраненных</button>
+      </figure>
+ </template>
+      <div class="result__articles"></div>
+      <button class="result__button result__button_invisible">Показать ещё</button> 
+      
+</section>
+
+    <div class="footer_menu">
+      <p class="footer_menu_copyrigth">© 2020 Supersite, Powered by News API</p>
+      <nav class="footer_menu-nav">
+        <ul class="footer_menu-list">
+        <a href="index.html" class=" footer_menu-link">Главная</a>
+        <a href="https://praktikum.yandex.ru/" class="footer_menu-link" target="_blank">Яндекс.Практикум</a>
+        </ul>
+        
+        <a href="https://github.com/salexxx/" target="_blank" class=" footer_menu-link">
+           <img  src="<%=require('../images/github-logo.png').default%>" alt="github icon"></a>
+        <a href="https://vk.com/id19404832" target="_blank" class="footer_menu-link">
+            <img src="<%=require('../images/vk.png').default%>" alt="vk icon"></a>
+           
+      </nav>
+      </div>
+      <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> 
+ </body>
+</html>

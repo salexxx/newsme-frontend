@@ -1,0 +1,28 @@
+.popup__error-message {
+position: absolute;
+top: 60px;
+left: 0px;     
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 15px;
+
+color: #FF0000;
+
+
+}
+.popup__error-message-span {
+    position: absolute;
+    top: 10px;
+    left: 0px;      
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #FF0000;
+    
+    
+    }

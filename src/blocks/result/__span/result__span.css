@@ -1,0 +1,8 @@
+.result__span {
+    font-family: 'RobotoRegular';
+    font-size: 18px;
+    color: #b6bcbf;
+    padding-top: 24px;
+    max-width: 336px;
+    text-align: center;
+}

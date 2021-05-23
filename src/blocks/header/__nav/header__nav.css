@@ -1,0 +1,122 @@
+.header__nav {
+  display: flex;
+  align-items: center;
+/*   visibility: visible;
+ */}
+
+.header__nav_list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.header__nav_link {
+    color: #fff;
+    font-family: 'RobotoMedium', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 32px;
+    text-decoration: none;
+    text-align: center;
+}
+.header__nav_link-black {
+    color: #1a1b22;
+    font-family: 'RobotoMedium', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 32px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.header__nav_link:hover {
+    opacity: .7;
+}
+
+.header__nav_black {
+    color: #1a1b22;
+}
+/* .header__nav_white {
+    color: #fff;
+}
+ */
+
+.header__nav_disable {
+    display: none; 
+}
+.header__nav_active {
+    margin-top: 32px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 27px;
+}
+.header__nav_active-black {
+    margin-top: 32px;
+    border-bottom: 3px solid #1a1b22;
+    padding-bottom: 27px;
+}
+.header__nav_button {
+    outline: none;
+    background-color: transparent;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    height: 48px;
+    padding: 0px 15px;
+    
+}
+ 
+.header__nav_img {
+    margin-left: 10px;
+}
+.invisible {
+    display: none;
+}
+.vasible {
+    display: flex;
+}
+.header__nav_button-black {
+    border: 1px solid #d1d2d6;
+}
+@media all and (max-width: 1024px) {
+    .header__nav {
+       font-size: 16px;
+       margin-left: 16px;
+    }
+}
+@media all and (max-width: 663px) {
+    .header__nav {
+       margin: 0;
+       padding: 0;
+       position: absolute;
+       top: 0px;
+       left: 0;
+       flex-direction: column;
+       height: 256px;
+       max-width: 663px;
+       width: 100%;
+       background-color: #1a1b22;
+       border-bottom-right-radius: 16px;
+       border-bottom-left-radius: 16px;
+       align-items: flex-start;
+       padding-top: 120px;
+       visibility: hidden; 
+       /* opacity: 100%; */ 
+    /*    transition: .5s ease; */
+       /* display: none; */
+    }
+    .header__nav_button {
+       margin: 0 auto;
+    }
+    .header__nav_list {
+        width: 100%;
+    }
+    .header__nav_active {
+       border-bottom: 0px;
+    }
+}
+
+ @media all and (min-width: 664px) {
+    .header__nav {
+        visibility: visible;
+    }
+} 

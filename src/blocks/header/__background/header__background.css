@@ -1,0 +1,24 @@
+.header__background {
+    background-image: url('../../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png');
+    background-repeat: no-repeat;
+    background-position: center;
+position: absolute;
+z-index: -1;
+width: 100%;
+min-height: 576px; 
+top: 0px;
+left: 0px;
+}
+
+@media all and (max-width: 768px) {
+    .header__background {
+        background-image: url('../../../images/georgia-de-lotz-laptop.png');
+        background-position: top;
+    }
+}
+@media all and (max-width: 320px) {
+    .header__background {
+        background-image: url('../../../images/georgia-de-lotz-mobile.png');
+        background-position: top;
+    }
+}

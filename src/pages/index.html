@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Дипломная работа Yandex Praktikum. Сервис поиска и сохранения новостных статей.">
+  <meta name="author" content="Smolyaninov A.">
+  <link rel="icon" href="<%=require('../images/favicon.png').default%>" sizes="16x16" type="image/png" >
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <title>News Explorer</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__background"></div>
+      <img class="header__open" src="<%=require('../images/menu.png').default%>" alt="menu">
+      <p class="header__logo">NewsExplorer</p>
+      <ul class="header__nav">
+        <img class="header__close" src="<%=require('../images/back.png').default%>" alt="close menu" > 
+        <li class="header__nav_list"><a href="./index.html" class="header__nav_link header__nav_active">Главная</a></li>
+        <li class="header__nav_list"><a href="./articles.html" class="header__nav_link header__nav_linkto invisible">Сохранённые статьи</a></li>
+        <li class="header__nav_list"><button class="header__nav_link header__nav_button ">Авторизоваться
+          <image class="header__nav_img invisible" src="<%=require('../images/exit-white.png').default%>" alt="exit">
+        </button></li>
+      </ul>
+  </header>
+
+  <section class="search">
+    <div class="search__intro">
+      <p class="search__intro search__intro_title">Что в мире творится?</p>
+      <p class="search__intro search__intro_subtitle">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете</p>
+    </div>
+      <form id="searchForm" class="search__form">
+        <input  required class="search__input" type="text" name="input" placeholder="Введите тему новости">
+        <button type="submit" class="search__button">Искать</button></input>
+      </form>
+  </section>
+ 
+   <section class="result"> 
+     
+      <div class="result__preloader invisible">
+       <div class="circle-preloader"></div>
+       <span class="result__span">Идет поиск новостей...</span>
+      </div>
+
+    <div class="result__zero invisible">
+      <img  src="<%=require('../images/not-found_v1.png').default%>" alt="not found">
+      <span class="result__zero_title">Ничего не найдено</span>
+      <span class="result__span">К сожалению по вашему запросу ничего не найдено.</span>
+    </div>
+    
+    <h2 class="result__title result__title_invisible">Результаты поиска</h2>
+  
+         
+<template class="article">
+     <figure class="article"> 
+        <img src="<%=require('../images/image_08.png').default%>" alt="article image" class="article__image">
+        <div class="article__content">
+            <p class="article__date"></p>
+            <a class="article__title" href="" target="_blank"></a>
+            <p class="article__text"></p>
+            <p class="article__source"></p>
+        </div>
+        <button class="article__bookmark article__bookmark_normal"></button>
+        <button class="article__tooltip">Войдите, чтобы сохранять статьи</button>
+        <button class="article__tooltip_keyword invisible">Убрать из сохраненных</button>
+        
+     </figure>
+</template>
+<div class="result__articles result__articles_invisible"></div>
+  <button class="result__button result__button_invisible">Показать ещё</button> 
+
+</section> 
+
+    <footer class="footer">
+    <figure class="footer_about">
+      <img class="footer_image" src="<%=require('../images/author.png').default%>" alt="authors photo">
+      <figcaption class="footer_figcaption">
+        <h3 class="footer_figcaption__title">Об авторе</h3>
+        <p class="footer_figcaption__text">Привет всем! Меня зовут Алексей Смолянинов. Я занимаюсь веб-разработкой. Интересуюсь информацией в области сетевой безопасности.
+          <br>
+          <br>
+        Этот сайт является дипломной работой курса Яндекс.Практикум: Веб-разработчик. В процессе обучения я познакомился с фронтенд и бэкенд программированием. Научился работать на JavaScript, использовать варианты адаптивной верстки HTML/CSS с применением Grid, Flex. Научился работать с Webpack, npm, Git. Серверная часть приложения реализована на Node.js, база данных MongoDB. Теперь, использовав время самоизоляции на самообразование, я уверен что смогу приступить к более сложным проектам.  </p>
+      </figcaption>
+    </figure> 
+    <div class="footer_menu">
+      <p class="footer_menu_copyrigth">© 2020 Supersite, Powered by News API</p>
+      <nav class="footer_menu-nav">
+              <ul class="footer_menu-list">
+              <a href="index.html" class=" footer_menu-link">Главная</a>
+              <a href="https://praktikum.yandex.ru/" class="footer_menu-link" target="_blank">Яндекс.Практикум</a>
+              </ul>
+              
+              <a href="https://github.com/salexxx/" target="_blank" class=" footer_menu-link">
+                 <img  src="<%=require('../images/github-logo.png').default%>" alt="github icon"></a>
+              <a href="https://vk.com/id19404832" target="_blank" class="footer_menu-link">
+                  <img src="<%=require('../images/vk.png').default%>" alt="vk icon"></a>
+                 
+      </nav>
+    </div>
+  </footer> 
+
+ 
+    <div class="popup"> 
+     
+     <div class="popup__content" id="authoriz">
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
+        <h3 class="popup__title">Вход</h3>
+        <form id="authorization" class="popup__form" >
+            <div class="popup__form">
+            <span class="popup__invitation">Email</span>
+            <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+            <span class="popup__error-message"></span>
+            </div>
+            <div class="popup__form">
+            <span class="popup__invitation">Пароль</span>
+            <input type="password" name="password" class="popup__input" placeholder="Введите пароль" required minlength="6" maxlength="30">
+            <span class="popup__error-message"></span>
+            </div>
+            <div class="popup__content-center">
+              <span class="popup__error-message-span"></span>
+            <button type="submit" class="button popup__button">Войти</button>
+             <a class="popup__invitation toggle-to-authen" href="#"><span class="popup__input-subtext">или </span>Зарегистрироваться</a>
+            </div>
+        </form>
+      </div>
+
+      <div class="popup__content" id="authen" >
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
+        <h3 class="popup__title">Регистрация</h3>
+        <form id="registration" class="popup__form" >
+            <div class="popup__form">
+            <span class="popup__invitation">Email</span>
+            <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+            <span class="popup__error-message"></span>
+            </div>
+            <div class="popup__form">
+            <span class="popup__invitation">Пароль</span>
+            <input type="password" name="password" class="popup__input" placeholder="Введите пароль" required minlength="6" maxlength="30" >
+            <span class="popup__error-message"></span>
+            </div>
+            <div class="popup__form">
+              <span class="popup__invitation">Имя</span>
+              <input type="text" name="name" class="popup__input" placeholder="Введите имя" required minlength="2" maxlength="30" >
+              <span class="popup__error-message"></span>
+              </div>
+              <div class="popup__content-center">
+              <span class="popup__error-message-span"></span>
+            <button type="submit" class="button popup__button">Зарегистрироваться</button>
+            <a class="popup__invitation toggle-to-authoriz" href="#"><span class="popup__input-subtext">или </span>Войти</a>
+              </div>
+        </form>
+      </div>
+      
+      <div class="popup__content" id="success">
+        <img src="<%=require('../images/close.svg').default%>" alt="close" class="popup__close">
+        <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
+        <a class="popup__invitation popup__invitation-bold success-to-authoriz" href="#">Выполнить вход</a>
+      </div>
+       
+    </div>
+    
+  
+  
+  <script type='module' src="<%= htmlWebpackPlugin.files.js %>"></script> 
+ </body>
+</html>

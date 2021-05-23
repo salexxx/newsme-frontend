@@ -1,0 +1,24 @@
+
+.header__logo {
+    font-family: 'RobotoSlabBold', sans-serif; 
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    z-index: 100;
+    color: #fff;
+}
+
+/* .header__logo_white {
+    color: #fff;
+} */
+
+.header__logo_black {
+    color: #1a1b22;
+}
+
+@media all and (max-width: 250px) {
+    .header__logo {
+        font-size: 16px;
+    }
+}

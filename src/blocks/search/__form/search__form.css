@@ -1,0 +1,21 @@
+.search__form {
+        background-color: #fff;
+        border-radius: 100px;
+        height: 64px;
+        width: 608x;  
+        display: flex;
+        justify-content: space-between;
+    } 
+
+    @media all and (max-width: 768px) {
+        .search__form {
+            height: 56px;
+        }
+    }
+    @media all and (max-width: 320px) {
+        .search__form {
+            background-color: transparent;
+            height: 128px;
+            flex-direction: column;
+         }
+    }

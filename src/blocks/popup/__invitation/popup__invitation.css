@@ -1,0 +1,14 @@
+.popup__invitation {
+/*     margin-top: 10px;
+ */    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-decoration: none;
+    color: #2f71e5;
+    }
+.popup__invitation-bold {
+    font-size: 18px;
+    line-height: 50px;
+    }

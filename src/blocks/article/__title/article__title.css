@@ -1,0 +1,14 @@
+.article__title {
+    font-family: 'RobotoSlabRegular';
+    font-weight: normal;
+    font-size: 26px;
+    color: #1a1b22;
+    margin: 12px 0px;
+    text-decoration: none;
+   
+}
+@media all and (max-width: 1000px) {
+    .article__title {
+     font-size: 22px;
+    }
+}
